@@ -1,5 +1,110 @@
 ---
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
 ---
 <footer>
-    
+
+  <!-- Farvet toplinje -->
+  <div class="w-full h-[5px]" style="background-color: var(--color-secondary);"></div>
+
+  <!-- Øverste sektion med H4 og indhold -->
+  <section class="w-full px-10 py-16 lg:px-28 lg:py-24">
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-5">
+      
+      <div>
+        <Heading htmlheading="h4" size="h4" stylingclasses="text-[#001799] font-bold">
+          HEADSPACE SEKRETARIAT
+        </Heading>
+        <Text class="mt-2">
+          Østergade 5, 3 sal <br>
+          1100 København K <br>
+          info@headspace.dk <br>
+          50 846 846 <br>
+          HEADSPACE er et initiativ <br>
+          under Det Sociale <br>
+          Netværk <br>
+          CVR-nummer: 31920124
+        </Text>
+      </div>
+
+      <!-- FOR UNGE div – skjult på mobil -->
+      <div class="hidden lg:block">
+        <Heading htmlheading="h4" size="h4" stylingclasses="text-[#001799] font-bold">
+          FOR UNGE
+        </Heading> 
+        <Text class="mt-2"> 
+          Find nærmeste HEADSPACE <br>
+          Book en samtale <br>
+          Chat med os
+        </Text>
+      </div>
+
+      <div>
+        <Heading htmlheading="h4" size="h4" stylingclasses="text-[#001799] font-bold">
+          OM HEADSPACE
+        </Heading>
+        <Text class="mt-2">
+          Hvad er HEADSPACE? <br>
+          Rådgivningen <br>
+          Privatlivspolitik <br>
+          Cookiepolitik
+        </Text>
+      </div>
+
+      <div>
+        <Heading htmlheading="h4" size="h4" stylingclasses="text-[#001799] font-bold">
+          KONTAKT
+        </Heading>
+        <Text class="mt-2">
+          Kontakt os <br>
+          Bliv frivillig <br>
+          Giv en donation
+        </Text>
+      </div>
+
+      <div>
+        <Heading htmlheading="h4" size="h4" stylingclasses="text-[#001799] font-bold">
+          VORES SOCIALE MEDIER
+        </Heading>
+        <div class="grid grid-cols-2 gap-2 sm:gap-4 mt-4 sm:grid-cols-3 lg:grid-cols-3 justify-items-center">
+          <a href="https://www.facebook.com/HeadspaceDanmark" target="_blank" rel="noopener noreferrer">
+            <img src="/src/img/footer_1.png" alt="Facebook" class="max-w-[80px] lg:max-w-[100px] h-auto" />
+          </a>
+          <a href="https://x.com/headspaceDK" target="_blank" rel="noopener noreferrer">
+            <img src="/src/img/footer_2.png" alt="X / Twitter" class="max-w-[80px] lg:max-w-[100px] h-auto" />
+          </a>
+          <a href="https://www.linkedin.com/company/headspacedanmark/" target="_blank" rel="noopener noreferrer">
+            <img src="/src/img/footer_3.png" alt="LinkedIn" class="max-w-[80px] lg:max-w-[100px] h-auto" />
+          </a>
+          <a href="https://www.instagram.com/headspacedanmark/" target="_blank" rel="noopener noreferrer">
+            <img src="/src/img/footer_4.png" alt="Instagram" class="max-w-[80px] lg:max-w-[100px] h-auto" />
+          </a>
+          <a href="https://www.youtube.com/channel/UC4GMkHflZtBevA9Jf4lcMPQ" target="_blank" rel="noopener noreferrer">
+            <img src="/src/img/footer_5.png" alt="YouTube" class="max-w-[80px] lg:max-w-[100px] h-auto" />
+          </a>
+          <a href="https://www.tiktok.com/@headspacedanmark/" target="_blank" rel="noopener noreferrer">
+            <img src="/src/img/footer_6.png" alt="TikTok" class="max-w-[80px] lg:max-w-[100px] h-auto" />
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Denne tekstsektion centreret – skjult på mobil -->
+  <section class="hidden lg:block w-full px-10 py-12 lg:px-28">
+    <Text>
+      HEADSPACE er på ingen måde tilknyttet, sponsoreret eller har anden tilslutning til ejeren af meditations- og mindfulness-app’en Headspace Inc. HEADSPACE er inspireret af en australsk indsats af samme navn. Grundideen i headspace er, at hjælpen skal være på de unges præmisser – ikke på systemets. Sammenhæng, nem tilgængelighed og samarbejde på tværs er nøglen til at hjælpe unge i HEADSPACE.
+    </Text>
+  </section>
+
+
+<section class="py-8 pb-20 text-center">
+  <Text>
+    © 2013 – 2023 headspace | GoGrafix | Budgethost
+  </Text>
+</section>
+
+
 </footer>
+
