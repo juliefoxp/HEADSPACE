@@ -1,4 +1,46 @@
 ---
 import Logo from '../img/logo.png';
-import '../layouts/MainLayout.astro'
+import '../layouts/MainLayout.astro';
+import '../components/Heading.astro';
 ---
+<header class="bg-white border-b-[5px] border-secondary p-4 relative z-50">
+  <div class="container mx-auto flex items-center justify-between">
+    <a href="/" class="flex items-center space-x-2">
+      <img src={Logo.src} alt="Logo" class="h-10 w-auto" />
+    </a>
+
+    <!-- Desktop -->
+    <nav class="hidden md:flex items-center space-x-6">
+      <a href="/om-os" class="text-cta hover:text-cta-hover">OM OS</a>
+      <a href="/frivillig" class="text-cta hover:text-cta-hover">FRIVILLIG</a>
+      <a href="/chat" class="ml-4 px-10 py-2 bg-cta text-white rounded hover:bg-cta-hover transition">CHAT</a>
+      <a href="/stot" class="ml-2 px-10 py-2 bg-cta text-white rounded hover:bg-cta-hover transition">STØT</a>
+    </nav>
+
+    <!-- Mobil knapper -->
+    <button id="mobile-menu-button" class="md:hidden focus:outline-none z-50">
+      <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+
+<!-- Mobil -->
+<nav id="mobile-menu" class="hidden md:hidden flex flex-col space-y-4 px-4 bg-secondary absolute top-full left-0 w-full z-40 border-t border-secondary">
+  <a href="/om-os" class="text-white hover:text-cta-hover transition py-2">OM OS</a>
+  <a href="/frivillig" class="text-white hover:text-cta-hover transition py-2">FRIVILLIG</a>
+  <a href="/chat" class="text-white hover:text-primary transition py-2">CHAT</a>
+  <a href="/stot" class="text-white hover:text-cta-hover transition py-2">STØT</a>
+</nav>
+</header>
+
+<script defer>
+  var btn = document.getElementById("mobile-menu-button");
+  var menu = document.getElementById("mobile-menu");
+
+  if (btn && menu) {
+    btn.onclick = function() {
+      menu.classList.toggle("hidden");
+    };
+  }
+</script>
