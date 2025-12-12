@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
@@ -6,42 +6,54 @@
 @import "tailwindcss-intersect";
 
 @font-face {
-  font-family: 'Honk';
-  src: url('/fonts/Honk-Regular-VariableFont_MORF,SHLN.ttf') format('truetype');
+  font-family: "Barlow";
+  src: url("/fonts/Barlow-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900; /* hele spændet */
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'Quicksand';
-  src: url('/fonts/Quicksand-VariableFont_wght.ttf') format('truetype');
+  font-family: "Barlow";
+  src: url("/fonts/Barlow-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'Domine';
-  src: url('/fonts/Domine-Regular.ttf') format('truetype');
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
 }
 
 @theme {
-  /* Her tilføjes theme variable // tokens */
+  /* Farver */
+  --color-primary: #001799;
+  --color-secondary: #76afe7;
 
-  /*Farver */
-  --color-primary-400: #00E4F5;
-  --color-primary-500: #006269;
-  --color-primary-600: #006D75;
-  --color-secondary-400: #F5E400;
-  --color-secondary-500: #F5A600;
-  --color-secondary-600: #F57A00;
+  --color-cta: #bb1657;
+  --color-cta-hover: #f489a5;
 
-  /*Typografi */
-  --font-display: 'Honk', monospace;
-  --font-sans: 'Quicksand', sans-serif;
-  --font-serif: 'Domine', serif;
+  --color-accent: #f6edde;
+
+  --color-neutral-black: #000000;
+  --color-neutral-white: #ffffff;
+
+  /* Typografi */
+  --font-display: "Barlow", sans-serif; /* h1–h4 */
+  --font-sans: "Roboto", sans-serif; /* p */
 }
 
 @layer base {
 }
 
-@layer components{
+@layer components {
 }
-@layer utilities{
-  
+@layer utilities {
 }
