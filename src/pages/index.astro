@@ -4,6 +4,9 @@ import Heading from '../components/Heading.astro';
 import Text from '../components/Text.astro';
 import Video_1 from'../img/video_1.mp4';
 import Img_34 from '../img/img_34.png';
+import Img_35 from '../img/img_35.png';
+import Img_36 from '../img/img_36.png';
+import Img_37 from '../img/img_37.png';
 ---
 <MainLayout title="HEADSPACE.DK">
   <main>
@@ -28,21 +31,88 @@ import Img_34 from '../img/img_34.png';
   </video>
 </div>
     </section>
-	<section>
-		<Heading htmlheading="h1" size="h1" stylingclasses="text-primary font-black">DU ER IKKE ALENE</Heading>
-		<Heading htmlheading="h2" size="h2" stylingclasses="text-primary font-black">SAMMEN FINDER VI RO OG OVERSKUD</Heading>
-		<Text>Uanset hvad du går igennem, behøver du ikke stå med det selv. Hos Headspace møder vi dig i øjenhøjde og lytter uden at dømme. Her kan du tale om alt det, der fylder – stort som småt – og få støtte til at finde ro, retning og overskud igen.</Text>
-		<Text>Vi er her, når livet bliver svært, og når du har brug for nogen, der står på din side.</Text>
-		<Heading htmlheading="h2" size="h2" stylingclasses="text-primary font-black">RING TIL OS 54 54 12 45</Heading>
-		<img src={Img_34.src} alt="Beskrivende tekst" class="w-full max-w-md mx-auto rounded-lg shadow-lg" />
-	</section>
-	<section class="bg-accent">
-	<Heading htmlheading="h2" size="h2" stylingclasses="text-primary font-bold">RÆK DIN HÅND TIL OS</Heading>
-	<div class="bg-neutral-white">
-	<Heading htmlheading="h4" size="h4" stylingclasses="text-primary font-bold">KONTAKT OS</Heading>
-	<Text>Intet er for stort, og intet er for småt. Er du mellem 12 - 25 år, og har du brug for nogen at tale med?</Text>
-	<button class="bg-cta hover:bg-cta-hover rounded-sm text-neutral-white">RÆK UD</button>
-	</div>
-	</section>
+
+	<!-- Sammen finder vi ro afsnit starter her -->
+<section class="px-4 md:px-8 lg:px-16 py-12">
+
+  <!-- Overordnet overskrift -->
+  <div class="mb-8 text-center">
+    <Heading htmlheading="h1" size="h1" stylingclasses="text-primary font-black">
+      DU ER IKKE ALENE
+    </Heading>
+  </div>
+
+  <!-- Flex container til desktop -->
+  <div class="md:flex md:items-start md:justify-between md:mb-4">
+
+    <!-- Venstre kolonne: overskrift og tekst -->
+    <div class="md:w-1/2 space-y-4">
+      <Heading htmlheading="h2" size="h2" stylingclasses="text-primary font-black text-left">
+        SAMMEN FINDER VI RO <br /> OG OVERSKUD
+      </Heading>
+      <Text>
+        Uanset hvad du går igennem, behøver du ikke stå med det selv. Hos Headspace møder vi dig i øjenhøjde og lytter uden at dømme. Her kan du tale om alt det, der fylder – stort som småt – og få støtte til at finde ro, retning og overskud igen.
+      </Text>
+      <Text>
+        Vi er her, når livet bliver svært, og når du har brug for nogen, der står på din side.
+      </Text>
+
+      <!-- Mobil-version: Ring til os under tekst -->
+      <div class="flex flex-row items-center space-x-4 mt-4 md:hidden">
+        <Heading htmlheading="h2" size="h2" stylingclasses="text-primary font-black text-left">
+          RING TIL OS <br /> 54 54 12 45
+        </Heading>
+        <img src={Img_34.src} alt="Illustration af telefon" class="w-[80px] rounded-lg shadow-lg" />
+      </div>
+    </div>
+
+    <!-- Højre kolonne: kun vises på desktop -->
+    <div class="hidden md:flex md:w-1/2 flex-row items-center justify-end space-x-4">
+      <Heading htmlheading="h2" size="h2" stylingclasses="text-primary font-black text-right">
+        RING TIL OS <br /> 54 54 12 45
+      </Heading>
+      <img src={Img_34.src} alt="Illustration af telefon" class="w-[120px] rounded-lg shadow-lg" />
+    </div>
+  </div>
+</section>
+
+
+		
+
+		<section class="bg-accent">
+		<Heading htmlheading="h2" size="h2" stylingclasses="text-primary font-bold">RÆK DIN HÅND TIL OS</Heading>
+  <!-- Kontakt & chat cards -->
+  <div class="grid gap-8 md:grid-cols-3 justify-items-center">
+    <div class="bg-neutral-white p-4 max-w-[335px] h-[430px] flex flex-col justify-between rounded-md mb-10 mt-10">
+      <div>
+		<img src={Img_35.src} alt="illustration af hånd" class="mx-auto mb-10 mt-10"/>
+	
+        <Heading htmlheading="h4" size="h4" stylingclasses="text-primary font-bold">KONTAKT OS</Heading>
+        <Text>Intet er for stort, og intet er for småt. Er du mellem 12 - 25 år, og har du brug for nogen at tale med?</Text>
+      </div>
+      <a href="/#" class="bg-cta hover:bg-cta-hover rounded-sm text-neutral-white w-full py-3 font-black inline-block text-center">RÆK UD</a>
+    </div>
+
+    <div class="bg-neutral-white p-4 max-w-[335px] h-[430px] flex flex-col justify-between rounded-md mb-10 mt-10">
+      <div>
+		<img src={Img_36.src} alt="illustration af computerskærm" class="mx-auto mb-10 mt-10" />
+        <Heading htmlheading="h4" size="h4" stylingclasses="text-primary font-bold">CHAT MED OS</Heading>
+        <Text>Brug for nogen at chatte med helt anonymt og uforpligtende? Vi sidder klar mandag - torsdag fra kl. 12.00</Text>
+      </div>
+      <a href="/#" class="bg-cta hover:bg-cta-hover rounded-sm text-neutral-white w-full py-3 font-black inline-block text-center">CHAT</a>
+    </div>
+
+    <div class="bg-neutral-white p-4 max-w-[335px] h-[430px] flex flex-col justify-between rounded-md mb-10 mt-10">
+      <div>
+		<img src={Img_37.src} alt="illustration af familie" class="mx-auto mb-10 mt-10" />
+        <Heading htmlheading="h4" size="h4" stylingclasses="text-primary font-bold">ER DU FORÆLDRE?</Heading>
+        <Text>Vi tilbyder et fortroligt rum til både individuelle samtaler og samtaler til hele familien med fokus på mental trivsel for alle.</Text>
+      </div>
+     <a href="/#" class="bg-cta hover:bg-cta-hover rounded-sm text-neutral-white w-full py-3 font-black inline-block text-center">FÆLLESKAB</a>
+
+    </div>
+  </div>
+</section>
+
   </main>
 </MainLayout>
