@@ -32,8 +32,9 @@
   font-style: italic;
 }
 
+@import "tailwindcss";
+
 @theme {
-  /* Farver */
   --color-primary: #001799;
   --color-secondary: #76afe7;
 
@@ -45,9 +46,8 @@
   --color-neutral-black: #000000;
   --color-neutral-white: #ffffff;
 
-  /* Typografi */
-  --font-display: "Barlow", sans-serif; /* h1–h4 */
-  --font-sans: "Roboto", sans-serif; /* p */
+  --font-display: "Barlow", sans-serif;
+  --font-sans: "Roboto", sans-serif;
 }
 
 @layer base {
