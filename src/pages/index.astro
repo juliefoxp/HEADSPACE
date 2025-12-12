@@ -1,8 +1,48 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro"
+import Heading from '../components/Heading.astro';
+import Text from '../components/Text.astro';
+import Video_1 from'../img/video_1.mp4';
+import Img_34 from '../img/img_34.png';
 ---
 <MainLayout title="HEADSPACE.DK">
-	<main>
-		
-	</main>
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-[linear-gradient(to_bottom,#F6EDDE4D,#76AFE7CC)]">
+	<Heading htmlheading="display" size="display" stylingclasses="text-primary font-black">NOGEN AT TALE MED</Heading>
+      <Text>HEADSPACE tilbyder gratis og anonym rådgivning i hele Danmark til alle mellem 12-25 år</Text>
+      <button class="bg-cta hover:bg-cta-hover rounded-tr-xl rounded-br-xl text-neutral-white px-3 py-3">
+        HAR DU BRUG FOR HJÆLP?
+      </button>
+
+<div class="w-full max-w-3xl mx-auto my-8">
+  <video 
+    src={Video_1} 
+    class="w-full rounded-lg shadow-lg" 
+    autoplay 
+    muted 
+    loop 
+    playsinline
+  >
+    Din browser understøtter ikke video-tagget.
+  </video>
+</div>
+    </section>
+	<section>
+		<Heading htmlheading="h1" size="h1" stylingclasses="text-primary font-black">DU ER IKKE ALENE</Heading>
+		<Heading htmlheading="h2" size="h2" stylingclasses="text-primary font-black">SAMMEN FINDER VI RO OG OVERSKUD</Heading>
+		<Text>Uanset hvad du går igennem, behøver du ikke stå med det selv. Hos Headspace møder vi dig i øjenhøjde og lytter uden at dømme. Her kan du tale om alt det, der fylder – stort som småt – og få støtte til at finde ro, retning og overskud igen.</Text>
+		<Text>Vi er her, når livet bliver svært, og når du har brug for nogen, der står på din side.</Text>
+		<Heading htmlheading="h2" size="h2" stylingclasses="text-primary font-black">RING TIL OS 54 54 12 45</Heading>
+		<img src={Img_34.src} alt="Beskrivende tekst" class="w-full max-w-md mx-auto rounded-lg shadow-lg" />
+	</section>
+	<section class="bg-accent">
+	<Heading htmlheading="h2" size="h2" stylingclasses="text-primary font-bold">RÆK DIN HÅND TIL OS</Heading>
+	<div class="bg-neutral-white">
+	<Heading htmlheading="h4" size="h4" stylingclasses="text-primary font-bold">KONTAKT OS</Heading>
+	<Text>Intet er for stort, og intet er for småt. Er du mellem 12 - 25 år, og har du brug for nogen at tale med?</Text>
+	<button class="bg-cta hover:bg-cta-hover rounded-sm text-neutral-white">RÆK UD</button>
+	</div>
+	</section>
+  </main>
 </MainLayout>
