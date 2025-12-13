@@ -1,0 +1,142 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+---
+
+
+<MainLayout title="Støt HEADSPACE">
+  <div class="w-full max-w-3xl mx-auto mt-10 border-5 border-secondary rounded-lg p-6 flex flex-col gap-8 mb-10">
+    <Heading htmlheading="h1" size="h1" stylingclasses="text-center text-primary font-black text-4xl">
+      STØT HEADSPACE
+    </Heading>
+
+    <!-- Enkelt eller månedligt indbetaling -->
+    <form class="flex w-full max-w-xl mx-auto gap-2">
+      <div class="relative flex-1">
+        <input type="radio" name="betaling" id="single" value="single" class="peer hidden" checked>
+        <label for="single" 
+               class="cursor-pointer p-6 text-center border-1 border-r-0 border-neutral-black bg-neutral-black/10 
+                      peer-checked:bg-secondary peer-checked:text-neutral-black transition-colors block rounded-l-lg">
+          Enkelt indbetaling
+        </label>
+      </div>
+
+      <div class="relative flex-1">
+        <input type="radio" name="betaling" id="monthly" value="monthly" class="peer hidden">
+        <label for="monthly" 
+               class="cursor-pointer p-6 text-center border-1 border-neutral-black bg-neutral-black/10 
+                      peer-checked:bg-secondary peer-checked:text-neutral-black transition-colors block rounded-r-lg">
+          Støt månedligt
+        </label>
+      </div>
+    </form>
+
+    <!-- Beløber -->
+    <div class="w-full max-w-xl mx-auto">
+      <Text stylingclasses="mb-2 text-lg font-semibold text-left">Beløb</Text>
+      <form class="flex gap-2">
+        <!-- 200 DKK -->
+        <div class="relative flex-1">
+          <input type="radio" name="amount" id="amount1" value="200" class="peer hidden" checked>
+          <label for="amount1" 
+                 class="cursor-pointer p-6 text-center border-1 border-neutral-black bg-neutral-black/10 
+                        peer-checked:bg-secondary peer-checked:text-neutral-black transition-colors block rounded-l-lg">
+            200 DKK
+          </label>
+        </div>
+
+        <!-- 300 DKK -->
+        <div class="relative flex-1">
+          <input type="radio" name="amount" id="amount2" value="300" class="peer hidden">
+          <label for="amount2" 
+                 class="cursor-pointer p-6 text-center border-1 border-neutral-black bg-neutral-black/10 
+                        peer-checked:bg-secondary peer-checked:text-neutral-black transition-colors block">
+            300 DKK
+          </label>
+        </div>
+
+        <!-- 500 DKK -->
+        <div class="relative flex-1">
+          <input type="radio" name="amount" id="amount3" value="500" class="peer hidden">
+          <label for="amount3" 
+                 class="cursor-pointer p-6 text-center border-1 border-neutral-black bg-neutral-black/10 
+                        peer-checked:bg-secondary peer-checked:text-neutral-black transition-colors block">
+            500 DKK
+          </label>
+        </div>
+
+        <!-- Andet beløb -->
+        <div class="relative flex-1">
+          <input type="radio" name="amount" id="amountCustom" value="custom" class="peer hidden">
+          <label for="amountCustom" 
+                 class="cursor-pointer p-6 text-center border-1 border-neutral-black rounded-r-lg 
+                        bg-neutral-black/10  
+                        peer-checked:bg-secondary peer-checked:text-neutral-black transition-colors block h-full flex items-center justify-center">
+            <input type="text" name="customAmount" placeholder="Andet" 
+                   class="w-full bg-transparent text-neutral-black border-none focus:outline-none focus:ring-0 text-center h-6"
+                   onfocus="document.getElementById('amountCustom').checked = true;" />
+          </label>
+        </div>
+      </form>
+    </div>
+
+    <!-- Betalingsmetode -->
+    <div class="w-full max-w-xl mx-auto flex flex-col gap-2">
+      <!-- MobilePay -->
+      <label for="mobilepay" class="flex items-center cursor-pointer gap-3">
+        <input type="radio" name="paymentMethod" id="mobilepay" class="peer hidden" checked>
+        <span style="width:60px; height:60px;" 
+              class="border-1 border-neutral-black rounded-sm bg-neutral-black/10 peer-checked:bg-secondary transition-colors"></span>
+        <span class="text-neutral-black text-lg">MobilePay</span>
+      </label>
+      <!-- Betalingskort -->
+      <label for="card" class="flex items-center cursor-pointer gap-3">
+        <input type="radio" name="paymentMethod" id="card" class="peer hidden">
+        <span style="width:60px; height:60px;" 
+              class="border-1 border-neutral-black rounded-sm bg-neutral-black/10 peer-checked:bg-secondary transition-colors"></span>
+        <span class="text-neutral-black text-lg">Betalingskort</span>
+      </label>
+    </div>
+
+    <!-- Kontaktformular -->
+    <div class="w-full max-w-xl mx-auto flex flex-col gap-4">
+      <fieldset class="flex flex-col">
+        <legend class="mb-1 text-neutral-black font-semibold text-left">Fornavn:</legend>
+        <input type="text" placeholder="Skriv her"
+               class="input w-full border-1 border-neutral-black rounded-lg bg-neutral-black/10 text-neutral-black p-4 focus:outline-none focus:ring-0" />
+      </fieldset>
+
+      <fieldset class="flex flex-col">
+        <legend class="mb-1 text-neutral-black font-semibold text-left">Efternavn:</legend>
+        <input type="text" placeholder="Skriv her"
+               class="input w-full border-1 border-neutral-black rounded-lg bg-neutral-black/10 text-neutral-black p-4 focus:outline-none focus:ring-0" />
+      </fieldset>
+
+      <fieldset class="flex flex-col">
+        <legend class="mb-1 text-neutral-black font-semibold text-left">E-mail:</legend>
+        <input type="text" placeholder="Mail@site.com"
+               class="input w-full border-1 border-neutral-black rounded-lg bg-neutral-black/10 text-neutral-black p-4 focus:outline-none focus:ring-0" />
+      </fieldset>
+
+      <fieldset class="flex flex-col">
+        <legend class="mb-1 text-neutral-black font-semibold text-left">Telefon:</legend>
+        <input type="text" placeholder="Telefon"
+               class="input w-full border-1 border-neutral-black rounded-lg bg-neutral-black/10 text-neutral-black p-4 focus:outline-none focus:ring-0" />
+      </fieldset>
+
+      <fieldset class="flex flex-col">
+        <legend class="mb-1 text-neutral-black font-semibold text-left">Adresse:</legend>
+        <input type="text" placeholder="Skriv her"
+               class="input w-full border-1 border-neutral-black rounded-lg bg-neutral-black/10 text-neutral-black p-4 focus:outline-none focus:ring-0" />
+      </fieldset>
+
+      <!-- Støt-knap -->
+      <a href="/#" 
+         class="bg-cta hover:bg-cta-hover rounded-lg text-neutral-white py-4 px-4 font-black block text-center mt-5 w-40 mx-auto mb-10">
+        STØT
+      </a>
+    </div>
+
+  </div>
+</MainLayout>
