@@ -2,33 +2,29 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
+import Img_33 from '../img/img_33.png';
+
 ---
 
 
 <MainLayout title="Støt HEADSPACE">
-  <div class="w-full max-w-3xl mx-auto mt-10 border-5 border-secondary rounded-lg p-6 flex flex-col gap-8 mb-10">
+  <div class="w-11/12 sm:max-w-md md:max-w-3xl mx-auto mt-6 sm:mt-10 border-5 border-secondary rounded-lg p-6 flex flex-col gap-8 mb-10">
     <Heading htmlheading="h1" size="h1" stylingclasses="text-center text-primary font-black text-4xl">
       STØT HEADSPACE
     </Heading>
-
     <!-- Enkelt eller månedligt indbetaling -->
     <form class="flex w-full max-w-xl mx-auto gap-2">
       <div class="relative flex-1">
         <input type="radio" name="betaling" id="single" value="single" class="peer hidden" checked>
         <label for="single" 
                class="cursor-pointer p-6 text-center border-1 border-r-0 border-neutral-black bg-neutral-black/10 
-                      peer-checked:bg-secondary peer-checked:text-neutral-black transition-colors block rounded-l-lg">
-          Enkelt indbetaling
-        </label>
-      </div>
-
-      <div class="relative flex-1">
+                      peer-checked:bg-secondary peer-checked:text-neutral-black transition-colors block rounded-l-lg">Enkelt indbetaling</label>
+                    </div>
+        <div class="relative flex-1">
         <input type="radio" name="betaling" id="monthly" value="monthly" class="peer hidden">
         <label for="monthly" 
                class="cursor-pointer p-6 text-center border-1 border-neutral-black bg-neutral-black/10 
-                      peer-checked:bg-secondary peer-checked:text-neutral-black transition-colors block rounded-r-lg">
-          Støt månedligt
-        </label>
+                      peer-checked:bg-secondary peer-checked:text-neutral-black transition-colors block rounded-r-lg">Støt månedligt</label>
       </div>
     </form>
 
@@ -41,39 +37,34 @@ import Text from "../components/Text.astro";
           <input type="radio" name="amount" id="amount1" value="200" class="peer hidden" checked>
           <label for="amount1" 
                  class="cursor-pointer p-6 text-center border-1 border-neutral-black bg-neutral-black/10 
-                        peer-checked:bg-secondary peer-checked:text-neutral-black transition-colors block rounded-l-lg">
-            200 DKK
-          </label>
-        </div>
+                        peer-checked:bg-secondary peer-checked:text-neutral-black transition-colors block rounded-l-lg">200 DKK</label>
+                    </div>
 
         <!-- 300 DKK -->
         <div class="relative flex-1">
           <input type="radio" name="amount" id="amount2" value="300" class="peer hidden">
           <label for="amount2" 
                  class="cursor-pointer p-6 text-center border-1 border-neutral-black bg-neutral-black/10 
-                        peer-checked:bg-secondary peer-checked:text-neutral-black transition-colors block">
-            300 DKK
-          </label>
-        </div>
+                        peer-checked:bg-secondary peer-checked:text-neutral-black transition-colors block">300 DKK</label>
+                    </div>
 
         <!-- 500 DKK -->
         <div class="relative flex-1">
           <input type="radio" name="amount" id="amount3" value="500" class="peer hidden">
           <label for="amount3" 
                  class="cursor-pointer p-6 text-center border-1 border-neutral-black bg-neutral-black/10 
-                        peer-checked:bg-secondary peer-checked:text-neutral-black transition-colors block">
-            500 DKK
-          </label>
-        </div>
+                        peer-checked:bg-secondary peer-checked:text-neutral-black transition-colors block">500 DKK</label>
+                    </div>
 
         <!-- Andet beløb -->
         <div class="relative flex-1">
           <input type="radio" name="amount" id="amountCustom" value="custom" class="peer hidden">
           <label for="amountCustom" 
-                 class="cursor-pointer p-6 text-center border-1 border-neutral-black rounded-r-lg 
-                        bg-neutral-black/10  
-                        peer-checked:bg-secondary peer-checked:text-neutral-black transition-colors block h-full flex items-center justify-center">
-            <input type="text" name="customAmount" placeholder="Andet" 
+                 class="cursor-pointer text-center border-1 border-neutral-black rounded-r-lg 
+                        bg-neutral-black/10 peer-checked:bg-secondary peer-checked:text-neutral-black 
+                        transition-colors block h-full flex items-center justify-center p-6">
+            <span class="absolute left-1/4 md:left-1/3 text-neutral-black pointer-events-none">Andet</span>
+            <input type="text" name="customAmount" placeholder="" 
                    class="w-full bg-transparent text-neutral-black border-none focus:outline-none focus:ring-0 text-center h-6"
                    onfocus="document.getElementById('amountCustom').checked = true;" />
           </label>
@@ -81,25 +72,26 @@ import Text from "../components/Text.astro";
       </form>
     </div>
 
-    <!-- Betalingsmetode -->
-    <div class="w-full max-w-xl mx-auto flex flex-col gap-2">
-      <!-- MobilePay -->
-      <label for="mobilepay" class="flex items-center cursor-pointer gap-3">
-        <input type="radio" name="paymentMethod" id="mobilepay" class="peer hidden" checked>
-        <span style="width:60px; height:60px;" 
-              class="border-1 border-neutral-black rounded-sm bg-neutral-black/10 peer-checked:bg-secondary transition-colors"></span>
-        <span class="text-neutral-black text-lg">MobilePay</span>
-      </label>
-      <!-- Betalingskort -->
-      <label for="card" class="flex items-center cursor-pointer gap-3">
-        <input type="radio" name="paymentMethod" id="card" class="peer hidden">
-        <span style="width:60px; height:60px;" 
-              class="border-1 border-neutral-black rounded-sm bg-neutral-black/10 peer-checked:bg-secondary transition-colors"></span>
-        <span class="text-neutral-black text-lg">Betalingskort</span>
-      </label>
-    </div>
+  <!-- Betaling sektion -->
+<div class="w-full max-w-xl mx-auto flex flex-col gap-2">
+  <!-- MobilePay -->
+  <label for="mobilepay" class="flex items-center cursor-pointer gap-3">
+    <input type="radio" name="paymentMethod" id="mobilepay" class="peer hidden" checked>
+    <span style="width:60px; height:60px;" 
+          class="border-1 border-neutral-black rounded-sm bg-neutral-black/10 peer-checked:bg-secondary transition-colors"></span>
+    <span class="text-neutral-black text-lg">MobilePay</span>
+  </label>
 
-    <!-- Kontaktformular -->
+  <!-- kort -->
+  <label for="card" class="flex items-center cursor-pointer gap-3">
+    <input type="radio" name="paymentMethod" id="card" class="peer hidden">
+    <span style="width:60px; height:60px;" 
+          class="border-1 border-neutral-black rounded-sm bg-neutral-black/10 peer-checked:bg-secondary transition-colors"></span>
+    <span class="text-neutral-black text-lg">Betalingskort</span>
+  </label>
+</div>
+
+    <!-- Kontakt sektion -->
     <div class="w-full max-w-xl mx-auto flex flex-col gap-4">
       <fieldset class="flex flex-col">
         <legend class="mb-1 text-neutral-black font-semibold text-left">Fornavn:</legend>
@@ -132,11 +124,29 @@ import Text from "../components/Text.astro";
       </fieldset>
 
       <!-- Støt-knap -->
-      <a href="/#" 
-         class="bg-cta hover:bg-cta-hover rounded-lg text-neutral-white py-4 px-4 font-black block text-center mt-5 w-40 mx-auto mb-10">
-        STØT
-      </a>
+      <a href="#tak" 
+         class="bg-cta hover:bg-cta-hover rounded-lg text-neutral-white py-4 px-4 font-black block text-center mt-5 w-40 mx-auto mb-10">STØT</a>
     </div>
-
   </div>
+
+  <!-- TAK sektion -->
+  <section id="tak" class="bg-secondary pb-10 pt-10 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-[auto_1fr] gap-8 items-start">
+      <div class="order-2 md:order-1 flex justify-center md:justify-start md:items-start md:-ml-16 md:translate-y-10">
+        <img
+          src={Img_33.src}
+          alt="hænder som omkredser et hjerte"
+          class="w-55 max-w-sm"
+        />
+      </div>
+      <div class="order-1 md:order-2 md:pl-8">
+        <Heading htmlheading="h4" size="h4" stylingclasses="text-primary font-bold">TAK!</Heading>
+        <div class="space-y-4 max-w-3xl">
+          <Text>Hos headspace tilbyder vi et frirum for unge mellem 12-25 år, der har brug for nogen at tale med. Vores rådgivere er altid klar til at lytte, og det bedste af det hele er, at det er helt gratis og anonymt.</Text>
+          <Text>Mange unge oplever perioder, hvor tankerne fylder, og livet ikke går, som man havde håbet. Det er helt normalt, men det kan også være en stor belastning. Hos headspace står vores døre åbne over hele landet, så ingen skal gå igennem disse perioder alene. Vi tilbyder så mange samtaler, som der er behov for, helt uden ventelister og uden at det koster noget.</Text>
+          <Text>For at kunne fortsætte dette vigtige arbejde har vi brug for din støtte. Din donation gør det muligt for os at nå ud til flere unge, sikre tilgængelige samtaler og tilbyde en tryg og fortrolig ramme, hvor tanker kan deles og lettes. Ved at donere til headspace hjælper du med at sikre, at flere unge får den støtte, de har brug for, i en svær tid.</Text>
+        </div>
+      </div>
+    </div>
+  </section>
 </MainLayout>
