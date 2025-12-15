@@ -6,15 +6,15 @@ import '../components/Heading.astro';
 <header class="bg-white border-b-[5px] border-secondary p-4 relative z-50">
   <div class="container mx-auto flex items-center justify-between">
     <a href="/" class="flex items-center space-x-2">
-      <img src={Logo.src} alt="Logo" class="h-10 w-auto" />
+      <img src={Logo.src} alt="Logo" class="h-12 md:h-15 w-auto" />
     </a>
 
     <!-- Desktop -->
     <nav class="hidden md:flex items-center space-x-6">
-      <a href="/om-os" class="text-cta hover:text-cta-hover">OM OS</a>
-      <a href="/frivillig" class="text-cta hover:text-cta-hover">FRIVILLIG</a>
-      <a href="/chat" class="ml-4 px-10 py-2 bg-cta text-white rounded hover:bg-cta-hover transition">CHAT</a>
-      <a href="/stot" class="ml-2 px-10 py-2 bg-cta text-white rounded hover:bg-cta-hover transition">STØT</a>
+      <a href="/om" class="text-cta hover:text-cta-hover font-black">OM OS</a>
+      <a href="/frivillig" class="text-cta hover:text-cta-hover font-black">FRIVILLIG</a>
+      <a href="/chat" class="ml-4 px-10 py-2 bg-cta text-white rounded hover:bg-cta-hover transition font-black">CHAT</a>
+      <a href="/indsamling" class="ml-2 px-10 py-2 bg-cta text-white rounded hover:bg-cta-hover transition font-black">STØT</a>
     </nav>
 
     <!-- Mobil knapper -->
@@ -27,10 +27,10 @@ import '../components/Heading.astro';
 
 <!-- Mobil -->
 <nav id="mobile-menu" class="hidden md:hidden flex flex-col space-y-4 px-4 bg-secondary absolute top-full left-0 w-full z-40 border-t border-secondary">
-  <a href="/om-os" class="text-white hover:text-cta-hover transition py-2">OM OS</a>
+  <a href="/om" class="text-white hover:text-cta-hover transition py-2">OM OS</a>
   <a href="/frivillig" class="text-white hover:text-cta-hover transition py-2">FRIVILLIG</a>
-  <a href="/chat" class="text-white hover:text-primary transition py-2">CHAT</a>
-  <a href="/stot" class="text-white hover:text-cta-hover transition py-2">STØT</a>
+  <a href="/chat" class="text-white hover:text-cta-hover transition py-2">CHAT</a>
+  <a href="/indsamling" class="text-white hover:text-cta-hover transition py-2">STØT</a>
 </nav>
 </header>
 
