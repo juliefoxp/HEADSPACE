@@ -1,0 +1,158 @@
+---
+import MainLayout from "../layouts/MainLayout.astro"
+import Heading from '../components/Heading.astro';
+import Text from '../components/Text.astro';
+import Video_5 from'../img/video_5.mp4';
+---
+
+<MainLayout title="OM OS">
+  <main>
+
+    <!-- Farvet baggrund fuldbred -->
+    <div class="bg-secondary py-24 lg:py-16">
+
+      <!-- Wrapper med padding mobile-first -->
+      <section class="px-6 sm:px-6 md:px-12 lg:px-28">
+
+        <!-- H1 Section -->
+        <section>
+          <div class="mb-0 lg:mb-5 text-center">
+            <Heading 
+              htmlheading="h1" 
+              size="h1" 
+              stylingclasses="text-primary font-black">
+              MØD HEADSPACE - ET TRYGT FÆLLESKAB FOR UNGE
+            </Heading>
+          </div>
+
+          <!-- Video + Tekst: Mobile-first én kolonne, Desktop to kolonner -->
+          <div class="flex flex-col lg:flex-row items-start lg:items-center gap-8">
+
+            <!-- Video -->
+            <div class="flex justify-center lg:justify-start w-full lg:w-1/2">
+              <video 
+                src={Video_5} 
+                class="w-[380px] h-auto max-w-full"
+                autoplay 
+                muted 
+                loop 
+                playsinline>
+                Din browser understøtter ikke video-tagget.
+              </video>
+            </div>
+
+            <!-- H2 + Tekst -->
+            <div class="w-full lg:w-1/2">
+              <Heading 
+                htmlheading="h2" 
+                size="h2" 
+                stylingclasses="text-primary font-bold mb-4 text-center lg:text-left">
+                OM OS
+              </Heading>
+              <Text class="text-center lg:text-left">
+                HEADSPACE er et samtaletilbud, der tager udgangspunkt i dig og det, du har brug for at tale om. Vi er ikke psykologer, men tror på, at du selv bedst ved, hvad du har brug for, og vi hjælper dig ved at stille de rette spørgsmål. De fleste rådgivere er frivillige i alle aldre, der brænder for at hjælpe og lytter fordomsfrit.
+                <br><br>
+                Alle rådgivere får undervisning i samtaleteknik og lovgivning, og vi støtter brobygning til andre tilbud, hvis nødvendigt. headspace er akkrediteret af Rådgivnings-Danmark, og vi følger samtaleforløb tæt for at sikre, at det virker. Rådgivningen er sundhedsfremmende og forebyggende – vi er her for at lytte.
+              </Text>
+            </div>
+
+          </div>
+        </section>
+
+      </section>
+
+    </div>
+
+    <!-- Næste sektion -->
+    <section class="mt-15 lg:mt-25 px-6 sm:px-6 md:px-12 lg:px-28">
+      <Heading 
+        htmlheading="h2" 
+        size="h2" 
+        stylingclasses="text-primary font-bold mb-2 lg:mb-4">
+        HEADSPACES VÆRDIER
+      </Heading>
+    </section>
+
+      <!-- Farvet linje -->
+  <div class="w-full h-[5px]" style="background-color: var(--color-secondary);"></div>
+
+
+
+
+    <!-- BAGOM HEADSPACE -->
+<section class="mt-15 lg:mt-25 px-6 sm:px-6 md:px-12 lg:px-28">
+  <Heading 
+    htmlheading="h3" 
+    size="h3" 
+    stylingclasses="text-primary font-bold mb-2 lg:mb-4">
+    BAGOM HEADSPACE
+  </Heading>
+
+  <Text class="text-left px-2 sm:px-0">
+    HEADSPACE kom til Danmark efter australsk forbillede i 2013.
+    Fra begyndelsen har det været en mærkesag for os, at vi deler erfaringer, viden og inspiration med resten af verden.
+    <br><br>
+    De første spæde skridt ud i at etablere HEADSPACE Danmark blev trådt på PsykiatriNetværkets årlige Psykiatritopmøde i 2011, der havde ’unge og mental trivsel’ som tema. Her deltog HEADSPACE-leder Nick Prendergast fra Melbourne i Australien, hvor han præsenterede den australske ungerådgivning HEADSPACE for de 1.000 deltagere på topmødet.
+    <br><br>
+    To år senere blev HEADSPACE Danmark til som et initiativ under Foreningen Det Sociale Netværk, og de første seks HEADSPACE-centre åbnede i Danmark i 2013.
+    <br><br>
+    Siden da har den danske model af HEADSPACE inspireret bl.a. Island, Israel, Irland, Tyskland og Holland til at åbne deres lokalt tilpassede versioner af lignende tilbud, fordi vi kan se, at det virker at give de unge nogen at tale med.
+  </Text>
+</section>
+
+<!-- HEADSPACE I DANMARK -->
+<section class="mt-15 lg:mt-25 px-6 sm:px-6 md:px-12 lg:px-28">
+  <Heading 
+    htmlheading="h3" 
+    size="h3" 
+    stylingclasses="text-primary font-bold mb-2 lg:mb-4">
+    HEADSPACE I DANMARK
+  </Heading>
+
+  <div class="mb-24 lg:mb-26">
+    <Text class="text-left px-2 sm:px-0">
+      HEADSPACE-centrene er ledet af en lokal centerchef, der ofte leder 2-3 centre. Hvert center drives af et lille hold af lønnede ungerådgivere, der får hjælp af en masse frivillige, der alle har gennemgået en intern uddannelse i HEADSPACE.
+      Kommunerne, der medfinansierer HEADSPACE, har en “udstationeret” medarbejder i HEADSPACE, ligesom de fleste regioner har en medarbejder fra psykiatrien tilknyttet centrene.
+      <br><br>
+      Denne konstruktion sikrer, at der altid er en person fra enten kommune eller region, der kan brobygge til andre tilbud, hvis det skulle blive nødvendigt.
+    </Text>
+  </div>
+</section>
+
+
+    <!-- Farvet baggrund fuldbred -->
+    <div class="bg-accent py-24 lg:py-16">
+
+    <section class="mt-15 lg:mt-25 px-6 sm:px-6 md:px-12 lg:px-28">
+  <Heading 
+    htmlheading="h3" 
+    size="h3" 
+    stylingclasses="text-primary font-bold mb-2 lg:mb-4">
+VORES KAMPAGNER & SAMARBEJDER
+  </Heading>
+
+<Text> 
+    HEADSPACE er mere end rådgivning. Vi arbejder hver dag på at give ungdommen en stemme både i medierne og politisk, ligesom vi slår slag for, at børn og unges trivsel og mental sundhedsfremme skal tages seriøst.
+Vi står derfor bag flere kampagner, der retter spotlyset mod forskellige problematikker, udfordringer og budskaber, der skal sætte fokus på mental trivsel.
+<br> <br>
+
+HEADSPACE indgår også løbende i partnerskaber med andre organisationer og virksomheder, der ligesom os kæmper for aftabuisering og afstigmatisering, så vi kan være med til at sikre en forbedring af unges mentale sundhed.
+</Text>
+<br> <br>
+<br> <br>
+
+<Heading 
+    htmlheading="h4" 
+    size="h4" 
+    stylingclasses="text-primary font-bold mb-2 lg:mb-4">
+SE VORES FORSKELLIGE KAMPAGNER HERUNDER
+  </Heading>
+  <br> <br>
+
+<Text><strong>Interagér med plakaterne for at læse mere.</strong></Text>
+
+  </section>
+    </div>
+
+  </main>
+</MainLayout>
