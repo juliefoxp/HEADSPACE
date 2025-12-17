@@ -21,6 +21,7 @@ import Img_8 from '../img/img_8.webp';
 import Img_9 from '../img/img_9.webp';
 import Img_10 from '../img/img_10.png';
 import Img_11 from '../img/img_11.png';
+import Img_39 from '../img/img_39.png';
 
 ---
 
@@ -216,21 +217,37 @@ import Img_11 from '../img/img_11.png';
 <!-- Ungerådet -->
 <section class="px-6 md:px-12 lg:px-28 space-y-6 mt-15">
   <Heading htmlheading="h3" size="h3" stylingclasses="text-primary font-bold">UNGERÅDET</Heading>
-  <div>
+
+  {/* Grid kun på desktop for tekst og billede */}
+  <div class="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-start">
+    
+    {/* Tekst */}
     <div class="text-left max-w-4xl">
-    <Text>
-      Ungerådet er med til at sikre de unges stemme ind i hele vores organisation. Her sætter unge retning, udfordrer vanetænkning og er med, hvor beslutningerne træffes. Vi tror på, at ægte forandring og innovation sker, når unge er med fra starten og hele vejen igennem. Derfor er vores ungeråd ikke bare et sideløbende initiativ, men en vigtig drivkraft i vores arbejde og strategi. Det handler ikke kun om at blive hørt – men også om at blive taget med hele vejen ind, hvor beslutningerne bliver taget.
-    </Text>
+      <Text>
+        Ungerådet er med til at sikre de unges stemme ind i hele vores organisation. Her sætter unge retning, udfordrer vanetænkning og er med, hvor beslutningerne træffes. Vi tror på, at ægte forandring og innovation sker, når unge er med fra starten og hele vejen igennem. Derfor er vores ungeråd ikke bare et sideløbende initiativ, men en vigtig drivkraft i vores arbejde og strategi. Det handler ikke kun om at blive hørt – men også om at blive taget med hele vejen ind, hvor beslutningerne bliver taget.
+      </Text>
     </div>
-    <br> <br>
+
+    {/* Billede kun på desktop til højre */}
+    <div class="hidden lg:flex justify-end">
+      <img src={Img_39.src} alt="tænkeboble med hjerte i" class="w-50"/>
+    </div>
+
   </div>
+
   <Heading htmlheading="h4" size="h4" stylingclasses="text-primary font-bold">SAMARBEJD MED UNGERÅDET</Heading>
   <div class="mb-15">
     <Text>
       Ønsker du at samarbejde med vores ungeråd, så kan du kontakte os lige her: ungeraadet@detsocialenetvaerk.dk
     </Text>
   </div>
+
+  {/* Billede på mobil under alt indhold */}
+  <div class="flex justify-center lg:hidden">
+    <img src={Img_39.src} alt="tænkeboble med hjerte i" class="w-50 mb-10"/>
+  </div>
 </section>
+
 
 <div class="bg-secondary p-5 grid grid-cols-1 md:grid-cols-3 justify-items-center gap-5">
   <div class="bg-white p-3 pb-5 flex flex-col items-center">
