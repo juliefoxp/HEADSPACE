@@ -150,7 +150,7 @@ import Img_11 from '../img/img_11.png';
             Når unge kommer til os, mærker de, at de ikke står alene, og at der er nogen, der
             lytter - uden at dømme og uden lange ventetider.
           </Text>
-          <a href="/#" class="inline-block bg-cta hover:bg-cta-hover rounded-sm text-neutral-white px-15 py-3 font-black text-center mt-3">LÆS MERE</a>
+          <button class="inline-block bg-cta hover:bg-cta-hover rounded-sm text-neutral-white px-15 py-3 font-black text-center mt-3">LÆS MERE</button>
         </div>
       </div>
     </section>
@@ -183,7 +183,7 @@ import Img_11 from '../img/img_11.png';
               <img src={Img_38.src} alt="illustration af hånd med hjerte i" class="w-32" />
             </div>
           </div>
-          <a href="/#" class="bg-cta hover:bg-cta-hover rounded-sm text-neutral-white w-full py-3 font-black inline-block text-center">DONATION</a>
+          <a href="/indsamling" class="bg-cta hover:bg-cta-hover rounded-sm text-neutral-white w-full py-3 font-black inline-block text-center">DONATION</a>
         </div>
       </div>
       <br> <br>
@@ -199,7 +199,7 @@ import Img_11 from '../img/img_11.png';
           <Text>
             Karakterræs. FOMO. Ensomhed. Perfekthedskultur. Kropisidealer. Seksualitet. Sammenligning. Forventningspres. Den her tale er til dig, der lever en ungdom, som alle andre, med dertilhørende udfordringer. Vi ser dig! Du er kun ung én gang. Og der er meget, du skal nå. Men lige meget hvad - så skal det nok gå.
           </Text>
-          <a href="/#" class="bg-cta hover:bg-cta-hover rounded-sm text-neutral-white py-3 px-6 font-black inline-block text-center mt-3">
+          <a href="#headspace" class="bg-cta hover:bg-cta-hover rounded-sm text-neutral-white py-3 px-6 font-black inline-block text-center mt-3">
             FIND DIT HEADSPACE
           </a>
         </div>
@@ -232,20 +232,45 @@ import Img_11 from '../img/img_11.png';
   </div>
 </section>
 
-
-   <!-- Ungerådet medlemmer -->
-<div class="bg-secondary p-6 md:px-12 lg:px-28 grid grid-cols-1 md:grid-cols-3 justify-items-center gap-5 mx-auto pt-15 pb-15">
-  {/** Medlemmer */}
-  {[Img_1,Img_2,Img_3,Img_4,Img_5,Img_6,Img_7,Img_8,Img_9].map((img, i) => (
-    <div class="bg-white p-3 pb-5 flex flex-col items-center">
-      <img src={img.src} alt={`Medlem ${i+1}`} class="w-60"/>
-      <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center font-bold text-primary">
-        {["JULIE","ASKE","LEA","PRINCE","LÆRKE","FELINE","ASTRID","SOFIE","VICTOR"][i]}
-      </Heading>
-    </div>
-  ))}
+<div class="bg-secondary p-5 grid grid-cols-1 md:grid-cols-3 justify-items-center gap-5">
+  <div class="bg-white p-3 pb-5 flex flex-col items-center">
+    <img src={Img_1.src} alt="Julie fra ungerådet" class="w-60"/>
+    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center font-medium text-primary font-bold">JULIE</Heading>
+  </div>
+  <div class="bg-white p-3 pb-5 flex flex-col items-center">
+    <img src={Img_2.src} alt="Aske fra ungerådet" class="w-60"/>
+    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center font-medium text-primary font-bold">ASKE</Heading>
+  </div>
+  <div class="bg-white p-3 pb-5 flex flex-col items-center">
+    <img src={Img_3.src} alt="Lea fra ungerådet" class="w-60"/>
+    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center font-medium text-primary font-bold">LEA</Heading>
+  </div>
+  <div class="bg-white p-3 pb-5 flex flex-col items-center">
+    <img src={Img_4.src} alt="Prince fra ungerådet" class="w-60"/>
+    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center font-medium text-primary font-bold">PRINCE</Heading>
+  </div>
+  <div class="bg-white p-3 pb-5 flex flex-col items-center">
+    <img src={Img_5.src} alt="Lærke fra ungerådet" class="w-60"/>
+    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center font-medium text-primary font-bold">LÆRKE</Heading>
+  </div>
+  <div class="bg-white p-3 pb-5 flex flex-col items-center">
+    <img src={Img_6.src} alt="Feline fra ungerådet" class="w-60"/>
+    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center font-medium text-primary font-bold">FELINE</Heading>
+  </div>
+  <div class="bg-white p-3 pb-5 flex flex-col items-center">
+    <img src={Img_7.src} alt="Astrid fra ungerådet" class="w-60"/>
+    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center font-medium text-primary font-bold">ASTRID</Heading>
+  </div>
+  <div class="bg-white p-3 pb-5 flex flex-col items-center">
+    <img src={Img_8.src} alt="Sofie fra ungerådet" class="w-60"/>
+    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center font-medium text-primary font-bold">SOFIE</Heading>
+  </div>
+  <div class="bg-white p-3 pb-5 flex flex-col items-center">
+    <img src={Img_9.src} alt="Victor fra ungerådet" class="w-60"/>
+    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center font-medium text-primary font-bold">VICTOR</Heading>
+  </div>
 </div>
-
+</section>
 
   <!-- Kort -->
 <section class="px-6 md:px-12 lg:px-28 mt-20">
@@ -258,7 +283,7 @@ import Img_11 from '../img/img_11.png';
     </div>
   </div>
       <div class="flex justify-center mt-6">
-        <img src={Img_10.src} alt="HEADSPACE kort" class="w-100 mt-20 mb-20"/>
+        <img id="headspace" src={Img_10.src} alt="HEADSPACE kort" class="w-100 mt-20 mb-20"/>
       </div>
     </section>
 
@@ -289,9 +314,9 @@ import Img_11 from '../img/img_11.png';
               class="input w-full max-w-xs md:max-w-[28rem] border-1 border-neutral-black rounded-sm bg-neutral-black/10 text-neutral-black p-4 focus:outline-none focus:ring-0 mb-3" />
           </fieldset>
 
-          <a href="/#" class="bg-cta hover:bg-cta-hover rounded-sm text-neutral-white py-3 px-6 font-black text-center mt-4 w-full max-w-xs md:max-w-[12.5rem] block">
+          <button class="bg-cta hover:bg-cta-hover rounded-sm text-neutral-white py-3 px-6 font-black text-center mt-4 w-full max-w-xs md:max-w-[12.5rem] block">
             TILMELD DIG
-          </a>
+          </button>
           <br> <br>
         </div>
       </div>
