@@ -23,296 +23,278 @@ import Img_10 from '../img/img_10.png';
 import Img_11 from '../img/img_11.png';
 
 ---
+
 <MainLayout title="HEADSPACE.DK">
   <main>
     <!-- Hero Section -->
-    <section class="bg-[linear-gradient(to_bottom,#F6EDDE4D,#76AFE7CC)] px-5 md:px-10 lg:px-20 py-5">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
+<section class="bg-[linear-gradient(to_bottom,#F6EDDE4D,#76AFE7CC)] px-6 md:px-12 lg:px-28 py-20">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-[75rem]">
     <div class="space-y-6 flex flex-col">
-      <Heading htmlheading="display" size="display" stylingclasses="text-primary font-black text-center md:text-left">NOGEN AT TALE MED</Heading>
+      <Heading htmlheading="display" size="display" stylingclasses="text-primary font-black text-center md:text-left">
+        NOGEN AT TALE MED
+      </Heading>
+      <!-- video mobil -->
       <div class="block md:hidden">
-        <video src={Video_1} class="w-110 max-w-full mx-auto"
-          autoplay 
-          muted 
-          loop 
-          playsinline>Din browser understøtter ikke video-tagget.</video>
+        <video src={Video_1} class="w-95 max-w-95 mx-auto" autoplay muted loop playsinline>
+          Din browser understøtter ikke video-tagget.
+        </video>
       </div>
-      <Text>HEADSPACE tilbyder gratis og anonym rådgivning i hele Danmark til alle mellem 12-25 år</Text>
-      <a href="/chat" class="bg-cta hover:bg-cta-hover rounded-tr-[100px] rounded-br-[100px] text-neutral-white px-15 py-6 font-black w-max inline-block text-center">HAR DU BRUG FOR HJÆLP?</a>
-    </div>
-    <div class="hidden md:flex justify-end">
-      <video 
-        src={Video_1} 
-        class="w-110 max-w-full"
-        autoplay 
-        muted 
-        loop 
-        playsinline>Din browser understøtter ikke video-tagget.</video>
-    </div>
-  </div>
-</section>
-	<!-- Sammen finder vi ro afsnit starter her -->
-<section class="px-4 md:px-8 lg:px-16 py-12">
-  <div class="mb-8 text-center">
-    <Heading htmlheading="h1" size="h1" stylingclasses="text-primary font-black">DU ER IKKE ALENE</Heading>
-  </div>
-  <div class="md:flex md:items-start md:justify-between md:mb-4">
-    <div class="md:w-1/2 space-y-4">
-      <Heading htmlheading="h2" size="h2" stylingclasses="text-primary font-bold text-left">SAMMEN FINDER VI RO <br /> OG OVERSKUD</Heading>
-      <Text>Uanset hvad du går igennem, behøver du ikke stå med det selv. Hos Headspace møder vi dig i øjenhøjde og lytter uden at dømme. Her kan du tale om alt det, der fylder – stort som småt – og få støtte til at finde ro, retning og overskud igen.</Text>
-      <Text stylingclasses="font-bold">Vi er her, når livet bliver svært, og når du har brug for nogen, der står på din side.</Text>
-      <div class="flex flex-row items-center space-x-4 mt-4 md:hidden pt-10">
-        <Heading htmlheading="h2" size="h2" stylingclasses="text-primary font-bold text-left">RING TIL OS <br /> 54 54 12 45</Heading>
-        <img src={Img_34.src} alt="Illustration af telefon" class="w-[75px] rounded-lg" />
-      </div>
-    </div>
-    <div class="hidden md:flex md:w-1/2 flex-row items-center justify-end space-x-4">
-      <Heading htmlheading="h2" size="h2" stylingclasses="text-primary font-bold text-right">RING TIL OS <br /> 54 54 12 45</Heading>
-      <img src={Img_34.src} alt="Illustration af telefon" class="w-[90px] rounded-lg" />
-    </div>
-  </div>
-</section>
-
-<section class="bg-accent pt-10">
-		<div class="text-center"><Heading htmlheading="h2" size="h2" stylingclasses="text-primary font-bold ">RÆK DIN HÅND TIL OS</Heading>
-		</div>
-
-  <!-- Kontakt & chat cards -->
-  <div class="grid gap-8 md:grid-cols-3 justify-items-center">
-    <div class="bg-neutral-white p-4 max-w-[335px] h-[430px] flex flex-col justify-between rounded-md mb-10 mt-10">
-      <div>
-		<img src={Img_35.src} alt="illustration af hånd" class="mx-auto mb-10 mt-10"/>
-	
-        <Heading htmlheading="h4" size="h4" stylingclasses="text-primary font-bold">KONTAKT OS</Heading>
-        <Text>Intet er for stort, og intet er for småt. Er du mellem 12 - 25 år, og har du brug for nogen at tale med?</Text>
-      </div>
-      <a href="/chat" class="bg-cta hover:bg-cta-hover rounded-sm text-neutral-white w-full py-3 font-black inline-block text-center">RÆK UD</a>
-    </div>
-
-    <div class="bg-neutral-white p-4 max-w-[335px] h-[430px] flex flex-col justify-between rounded-md mb-10 mt-10">
-      <div>
-		<img src={Img_36.src} alt="illustration af computerskærm" class="mx-auto mb-10 mt-10" />
-        <Heading htmlheading="h4" size="h4" stylingclasses="text-primary font-bold">CHAT MED OS</Heading>
-        <Text>Brug for nogen at chatte med helt anonymt og uforpligtende? Vi sidder klar mandag - torsdag fra kl. 12.00</Text>
-      </div>
-      <a href="/chat" class="bg-cta hover:bg-cta-hover rounded-sm text-neutral-white w-full py-3 font-black inline-block text-center">CHAT</a>
-    </div>
-
-    <div class="bg-neutral-white p-4 max-w-[335px] h-[430px] flex flex-col justify-between rounded-md mb-10 mt-10">
-      <div>
-		<img src={Img_37.src} alt="illustration af familie" class="mx-auto mb-10 mt-10" />
-        <Heading htmlheading="h4" size="h4" stylingclasses="text-primary font-bold">ER DU FORÆLDRE?</Heading>
-        <Text>Vi tilbyder et fortroligt rum til både individuelle samtaler og samtaler til hele familien med fokus på mental trivsel for alle.</Text>
-      </div>
-     <a href="/chat" class="bg-cta hover:bg-cta-hover rounded-sm text-neutral-white w-full py-3 font-black inline-block text-center">FÆLLESKAB</a>
-
-    </div>
-  </div>
-</section>
-
-<section class="px-4 md:px-8 lg:px-16 py-12">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-    <div>
-      <video 
-  src={Video_2} 
-  class="w-[380px] mx-auto" 
-  autoplay 
-  muted 
-  loop 
-  playsinline
->
-  Din browser understøtter ikke video-tagget.
-</video>
-    </div>
-    <div class="space-y-4">
-      <Heading htmlheading="h3" size="h3" stylingclasses="text-primary font-bold">
-        NY FORSKNING BEKRÆFTER ØGET TRIVSEL HOS UNGE I HEADSPACE
-      </Heading>
-      <Text>I HEADSPACE oplever vi hver dag, hvordan vores rådgivning gør en forskel for unge,
-        særligt dem, der har det allersværest. Nu viser ny forskning fra Region Hovedstadens
-        Psykiatri, at vores indsats ikke bare føles hjælpsom - den har en reel og målbar
-        effekt på unges trivsel og mentale sundhed.</Text>
-      <Text>Det glæder os enormt, at forskningen bekræfter det, vi har hørt fra de unge i årevis:
-        At et trygt rum til at dele tanker og bekymringer kan skabe en positiv forandring.
-        Når unge kommer til os, mærker de, at de ikke står alene, og at der er nogen, der
-        lytter - uden at dømme og uden lange ventetider.</Text>
-      <button class="inline-block bg-cta hover:bg-cta-hover rounded-sm text-neutral-white px-15 py-3 font-black text-center mt-3">LÆS MERE</button>
-    </div>
-  </div>
-</section>
-
- <!-- Donation section -->
-<section class="bg-secondary px-4 md:px-8 lg:px-16 py-7">
-  <Heading htmlheading="h3" size="h3" stylingclasses="text-primary font-bold text-center md:text-left">
-    SAMMEN GIVER VI UNGE MOD TIL  AT ÅBNE OP
-  </Heading>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:items-center"> 
-    <div class="space-y-4">
-      <Text>
-        Hos HEADSPACE tilbyder vi et frirum for unge mellem 12-25 år, der har brug for nogen at tale med. Vores rådgivere er altid klar til at lytte, og det bedste af det hele er, at det er helt gratis og anonymt.
-      </Text>
-      <Text>
-        Mange unge oplever perioder, hvor tankerne fylder, og livet ikke går, som man havde håbet. Det er helt normalt, men det kan også være en stor belastning. Hos headspace står vores døre åbne over hele landet, så ingen skal gå igennem disse perioder alene. Vi tilbyder så mange samtaler, som der er behov for, helt uden ventelister og uden at det koster noget.
-      </Text>
-      <Text>
-        For at kunne fortsætte dette vigtige arbejde har vi brug for din støtte. Din donation gør det muligt for os at nå ud til flere unge, sikre tilgængelige samtaler og tilbyde en tryg og fortrolig ramme, hvor tanker kan deles og lettes. Ved at donere til headspace hjælper du med at sikre, at flere unge får den støtte, de har brug for, i en svær tid.
-      </Text>
-    </div>
-
-    <!-- Card -->
-    <div class="bg-accent w-full max-w-[335px] h-[430px] p-4 rounded-md text-center mx-auto flex flex-col justify-between">
-      <div class="space-y-2">
-        <Heading htmlheading="h4" size="h4" stylingclasses="text-primary font-bold ">DONATIONER</Heading>
-        <Text>Bidrag med en donation til HEADSPACE</Text>
-        <div class="flex justify-center mt-15">
-          <img src={Img_38.src} alt="illustration af hånd med hjerte i" class="w-32" />
-        </div>
-      </div>
-      <a href="/indsamling" class="bg-cta hover:bg-cta-hover rounded-sm text-neutral-white w-full py-3 font-black inline-block text-center">DONATION</a>
-    </div>
-  </div>
-</section>
-
-<!-- Find dit headspace section -->
-<section class="px-4 md:px-8 lg:px-16 py-12">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-
-    <!-- Venstre kolonne-->
-    <div class="space-y-4">
-      <Heading htmlheading="h3" size="h3" stylingclasses="text-primary font-bold">
-        TALEN, DU IKKE VIDSTE, DU HAVDE BRUG FOR
-      </Heading>
-      <Text>
-        Karakterræs. FOMO. Ensomhed. Perfekthedskultur. Kropisidealer. Seksualitet. Sammenligning. Forventningspres. Den her tale er til dig, der lever en ungdom, som alle andre, med dertilhørende udfordringer. Vi ser dig! Du er kun ung én gang. Og der er meget, du skal nå. Men lige meget hvad - så skal det nok gå.
-      </Text>
-      <a href="#headspace" class="bg-cta hover:bg-cta-hover rounded-sm text-neutral-white py-3 px-6 font-black inline-block text-center mt-3">
-        FIND DIT HEADSPACE
+      <Text stylingclasses="font-bold">
+  HEADSPACE tilbyder gratis og anonym rådgivning i hele Danmark <br> til alle mellem 12-25 år
+</Text>
+      <a href="/chat" class="bg-cta hover:bg-cta-hover rounded-tr-[100px] rounded-br-[100px] text-neutral-white px-15 py-6 font-black w-max inline-block text-center">
+        HAR DU BRUG FOR HJÆLP?
       </a>
     </div>
-
-    <!-- Højre kolonne-->
-    <div class="flex justify-end md:justify-end">
-      <video src={Video_3} class="w-[380px] mx-auto"
-        autoplay 
-        muted 
-        loop 
-        playsinline>Din browser understøtter ikke video-tagget.
+    <!-- video desktop -->
+    <div class="hidden md:flex justify-end">
+      <video src={Video_1} class="w-110 max-w-full" autoplay muted loop playsinline>
+        Din browser understøtter ikke video-tagget.
       </video>
     </div>
   </div>
 </section>
-<div class="h-[5px] bg-secondary w-full"></div>
 
 
-<!--Ungerådet section -->
-<section class="px-5 md:px-10 lg:px-20 space-y-6 mt-15">
+    <!-- Sammen finder vi ro -->
+    <section class="px-6 md:px-12 lg:px-28 py-12">
+      <div class="mb-8 text-center">
+        <Heading htmlheading="h1" size="h1" stylingclasses="text-primary font-black">DU ER IKKE ALENE</Heading>
+      </div>
+      <div class="md:flex md:items-start md:justify-start md:mb-4">
+        <div class="w-full md:w-1/2 space-y-4 max-w-[75rem]">
+          <Heading htmlheading="h2" size="h2" stylingclasses="text-primary font-black text-left">
+            SAMMEN FINDER VI RO <br /> OG OVERSKUD
+          </Heading>
+          <Text>
+            Uanset hvad du går igennem, behøver du ikke stå med det selv. Hos Headspace møder vi dig i øjenhøjde og lytter uden at dømme. Her kan du tale om alt det, der fylder – stort som småt – og få støtte til at finde ro, retning og overskud igen.
+          </Text>
+          <Text>
+            Vi er her, når livet bliver svært, og når du har brug for nogen, der står på din side.
+          </Text>
+          <div class="flex flex-row items-center space-x-4 mt-4 md:hidden pt-10">
+            <Heading htmlheading="h2" size="h2" stylingclasses="text-primary font-black text-left">
+              RING TIL OS <br /> 54 54 12 45
+            </Heading>
+            <img src={Img_34.src} alt="Illustration af telefon" class="w-[80px] rounded-lg shadow-lg" />
+          </div>
+        </div>
+        <div class="hidden md:flex md:w-1/2 items-center justify-end space-x-4">
+          <Heading htmlheading="h2" size="h2" stylingclasses="text-primary font-black text-right">
+            RING TIL OS <br /> 54 54 12 45
+          </Heading>
+          <img src={Img_34.src} alt="Illustration af telefon" class="w-[120px] rounded-lg shadow-lg" />
+        </div>
+      </div>
+    </section>
 
+    <!-- Ræk hånden ud -->
+    <section class="bg-accent px-6 md:px-12 lg:px-28 py-12">
+      <div class="text-center mb-8 pt-6 pb-6">
+        <Heading htmlheading="h2" size="h2" stylingclasses="text-primary font-bold">RÆK DIN HÅND TIL OS</Heading>
+      </div>
+      <div class="grid gap-8 md:grid-cols-3 justify-items-center">
+  <!-- Kontakt card -->
+  <div class="bg-neutral-white p-4 max-w-[335px] h-[430px] flex flex-col justify-between rounded-md">
+    <div>
+      <img src={Img_35.src} alt="illustration af hånd" class="mx-auto mb-10 mt-10"/>
+      <Heading htmlheading="h4" size="h4" stylingclasses="text-primary font-bold">KONTAKT OS</Heading>
+      <Text>Intet er for stort, og intet er for småt. Er du mellem 12 - 25 år, og har du brug for nogen at tale med?</Text>
+    </div>
+    <a href="/#" class="bg-cta hover:bg-cta-hover rounded-sm text-neutral-white w-full py-3 font-black inline-block text-center">RÆK UD</a>
+  </div>
+
+  <!-- Chat card -->
+  <div class="bg-neutral-white p-4 max-w-[335px] h-[430px] flex flex-col justify-between rounded-md">
+    <div>
+      <img src={Img_36.src} alt="illustration af computerskærm" class="mx-auto mb-10 mt-10"/>
+      <Heading htmlheading="h4" size="h4" stylingclasses="text-primary font-bold">CHAT MED OS</Heading>
+      <Text>Brug for nogen at chatte med helt anonymt og uforpligtende? Vi sidder klar mandag - torsdag fra kl. 12.00</Text>
+    </div>
+    <a href="/#" class="bg-cta hover:bg-cta-hover rounded-sm text-neutral-white w-full py-3 font-black inline-block text-center">CHAT</a>
+  </div>
+
+  <!-- Forældre card -->
+  <div class="bg-neutral-white p-4 max-w-[335px] h-[430px] flex flex-col justify-between rounded-md">
+    <div>
+      <img src={Img_37.src} alt="illustration af familie" class="mx-auto mb-10 mt-10"/>
+      <Heading htmlheading="h4" size="h4" stylingclasses="text-primary font-bold">ER DU FORÆLDRE?</Heading>
+      <Text>Vi tilbyder et fortroligt rum til både individuelle samtaler og samtaler til hele familien med fokus på mental trivsel for alle.</Text>
+    </div>
+    <a href="/#" class="bg-cta hover:bg-cta-hover rounded-sm text-neutral-white w-full py-3 font-black inline-block text-center">FÆLLESKAB</a>
+  </div>
+</div>
+</section>
+
+    <!-- Video + tekst -->
+    <section class="px-6 md:px-12 lg:px-28 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-[75rem]">
+        <div>
+          <video src={Video_2} class="w-full max-w-[380px] mx-auto" autoplay muted loop playsinline>
+            Din browser understøtter ikke video-tagget.
+          </video>
+        </div>
+        <div class="space-y-4">
+          <Heading htmlheading="h3" size="h3" stylingclasses="text-primary font-bold">
+            NY FORSKNING BEKRÆFTER ØGET TRIVSEL HOS UNGE I HEADSPACE
+          </Heading>
+          <Text>
+            I HEADSPACE oplever vi hver dag, hvordan vores rådgivning gør en forskel for unge,
+            særligt dem, der har det allersværest. Nu viser ny forskning fra Region Hovedstadens
+            Psykiatri, at vores indsats ikke bare føles hjælpsom - den har en reel og målbar
+            effekt på unges trivsel og mentale sundhed.
+          </Text>
+          <Text>
+            Det glæder os enormt, at forskningen bekræfter det, vi har hørt fra de unge i årevis:
+            At et trygt rum til at dele tanker og bekymringer kan skabe en positiv forandring.
+            Når unge kommer til os, mærker de, at de ikke står alene, og at der er nogen, der
+            lytter - uden at dømme og uden lange ventetider.
+          </Text>
+          <a href="/#" class="inline-block bg-cta hover:bg-cta-hover rounded-sm text-neutral-white px-15 py-3 font-black text-center mt-3">LÆS MERE</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Donation -->
+    <section class="bg-secondary px-6 md:px-12 lg:px-28 py-7">
+      <div class="pt-12">
+      <Heading htmlheading="h3" size="h3" stylingclasses="text-primary font-bold text-center md:text-left">
+        SAMMEN GIVER VI UNGE MOD TIL AT ÅBNE OP
+      </Heading>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:items-center max-w-[75rem] mx-auto">
+        <div class="space-y-4">
+          <Text>
+            Hos HEADSPACE tilbyder vi et frirum for unge mellem 12-25 år, der har brug for nogen at tale med. Vores rådgivere er altid klar til at lytte, og det bedste af det hele er, at det er helt gratis og anonymt.
+          </Text>
+          <Text>
+            Mange unge oplever perioder, hvor tankerne fylder, og livet ikke går, som man havde håbet. Det er helt normalt, men det kan også være en stor belastning. Hos headspace står vores døre åbne over hele landet, så ingen skal gå igennem disse perioder alene. Vi tilbyder så mange samtaler, som der er behov for, helt uden ventelister og uden at det koster noget.
+          </Text>
+          <Text>
+            For at kunne fortsætte dette vigtige arbejde har vi brug for din støtte. Din donation gør det muligt for os at nå ud til flere unge, sikre tilgængelige samtaler og tilbyde en tryg og fortrolig ramme, hvor tanker kan deles og lettes. Ved at donere til headspace hjælper du med at sikre, at flere unge får den støtte, de har brug for, i en svær tid.
+          </Text>
+        </div>
+
+        <div class="bg-accent w-full max-w-[335px] h-[430px] p-4 rounded-md text-center mx-auto flex flex-col justify-between">
+          <div class="space-y-2 pt-10">
+            <Heading htmlheading="h4" size="h4" stylingclasses="text-primary font-bold">DONATIONER</Heading>
+            <Text>Bidrag med en donation til HEADSPACE</Text>
+            <div class="flex justify-center mt-15">
+              <img src={Img_38.src} alt="illustration af hånd med hjerte i" class="w-32" />
+            </div>
+          </div>
+          <a href="/#" class="bg-cta hover:bg-cta-hover rounded-sm text-neutral-white w-full py-3 font-black inline-block text-center">DONATION</a>
+        </div>
+      </div>
+      <br> <br>
+    </section>
+
+    <!-- Find dit headspace -->
+    <section class="px-6 md:px-12 lg:px-28 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-[75rem]">
+        <div class="space-y-4">
+          <Heading htmlheading="h3" size="h3" stylingclasses="text-primary font-bold">
+            TALEN, DU IKKE VIDSTE, DU HAVDE BRUG FOR
+          </Heading>
+          <Text>
+            Karakterræs. FOMO. Ensomhed. Perfekthedskultur. Kropisidealer. Seksualitet. Sammenligning. Forventningspres. Den her tale er til dig, der lever en ungdom, som alle andre, med dertilhørende udfordringer. Vi ser dig! Du er kun ung én gang. Og der er meget, du skal nå. Men lige meget hvad - så skal det nok gå.
+          </Text>
+          <a href="/#" class="bg-cta hover:bg-cta-hover rounded-sm text-neutral-white py-3 px-6 font-black inline-block text-center mt-3">
+            FIND DIT HEADSPACE
+          </a>
+        </div>
+        <div class="flex justify-end md:justify-end">
+          <video src={Video_3} class="w-full max-w-[380px] mx-auto" autoplay muted loop playsinline>
+            Din browser understøtter ikke video-tagget.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <div class="h-[5px] bg-secondary w-full"></div>
+
+<!-- Ungerådet -->
+<section class="px-6 md:px-12 lg:px-28 space-y-6 mt-15">
   <Heading htmlheading="h3" size="h3" stylingclasses="text-primary font-bold">UNGERÅDET</Heading>
-  <div class="max-w-3xl">
+  <div>
+    <div class="text-left max-w-4xl">
     <Text>
       Ungerådet er med til at sikre de unges stemme ind i hele vores organisation. Her sætter unge retning, udfordrer vanetænkning og er med, hvor beslutningerne træffes. Vi tror på, at ægte forandring og innovation sker, når unge er med fra starten og hele vejen igennem. Derfor er vores ungeråd ikke bare et sideløbende initiativ, men en vigtig drivkraft i vores arbejde og strategi. Det handler ikke kun om at blive hørt – men også om at blive taget med hele vejen ind, hvor beslutningerne bliver taget.
     </Text>
+    </div>
+    <br> <br>
   </div>
-
   <Heading htmlheading="h4" size="h4" stylingclasses="text-primary font-bold">SAMARBEJD MED UNGERÅDET</Heading>
-  <div class="max-w-3xl mb-15">
+  <div class="mb-15">
     <Text>
       Ønsker du at samarbejde med vores ungeråd, så kan du kontakte os lige her: ungeraadet@detsocialenetvaerk.dk
     </Text>
   </div>
-
 </section>
 
 
-<div class="bg-secondary p-5 grid grid-cols-1 md:grid-cols-3 justify-items-center gap-5">
-  <div class="bg-white p-3 pb-5 flex flex-col items-center">
-    <img src={Img_1.src} alt="Julie fra ungerådet" class="w-60"/>
-    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center font-medium text-primary font-bold">JULIE</Heading>
-  </div>
-  <div class="bg-white p-3 pb-5 flex flex-col items-center">
-    <img src={Img_2.src} alt="Aske fra ungerådet" class="w-60"/>
-    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center font-medium text-primary font-bold">ASKE</Heading>
-  </div>
-  <div class="bg-white p-3 pb-5 flex flex-col items-center">
-    <img src={Img_3.src} alt="Lea fra ungerådet" class="w-60"/>
-    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center font-medium text-primary font-bold">LEA</Heading>
-  </div>
-  <div class="bg-white p-3 pb-5 flex flex-col items-center">
-    <img src={Img_4.src} alt="Prince fra ungerådet" class="w-60"/>
-    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center font-medium text-primary font-bold">PRINCE</Heading>
-  </div>
-  <div class="bg-white p-3 pb-5 flex flex-col items-center">
-    <img src={Img_5.src} alt="Lærke fra ungerådet" class="w-60"/>
-    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center font-medium text-primary font-bold">LÆRKE</Heading>
-  </div>
-  <div class="bg-white p-3 pb-5 flex flex-col items-center">
-    <img src={Img_6.src} alt="Feline fra ungerådet" class="w-60"/>
-    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center font-medium text-primary font-bold">FELINE</Heading>
-  </div>
-  <div class="bg-white p-3 pb-5 flex flex-col items-center">
-    <img src={Img_7.src} alt="Astrid fra ungerådet" class="w-60"/>
-    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center font-medium text-primary font-bold">ASTRID</Heading>
-  </div>
-  <div class="bg-white p-3 pb-5 flex flex-col items-center">
-    <img src={Img_8.src} alt="Sofie fra ungerådet" class="w-60"/>
-    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center font-medium text-primary font-bold">SOFIE</Heading>
-  </div>
-  <div class="bg-white p-3 pb-5 flex flex-col items-center">
-    <img src={Img_9.src} alt="Victor fra ungerådet" class="w-60"/>
-    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center font-medium text-primary font-bold">VICTOR</Heading>
-  </div>
+   <!-- Ungerådet medlemmer -->
+<div class="bg-secondary p-6 md:px-12 lg:px-28 grid grid-cols-1 md:grid-cols-3 justify-items-center gap-5 mx-auto pt-15 pb-15">
+  {/** Medlemmer */}
+  {[Img_1,Img_2,Img_3,Img_4,Img_5,Img_6,Img_7,Img_8,Img_9].map((img, i) => (
+    <div class="bg-white p-3 pb-5 flex flex-col items-center">
+      <img src={img.src} alt={`Medlem ${i+1}`} class="w-60"/>
+      <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center font-bold text-primary">
+        {["JULIE","ASKE","LEA","PRINCE","LÆRKE","FELINE","ASTRID","SOFIE","VICTOR"][i]}
+      </Heading>
+    </div>
+  ))}
 </div>
-</section>
 
-<section class="px-5 md:px-10 lg:px-20 mt-10">
+
+  <!-- Kort -->
+<section class="px-6 md:px-12 lg:px-28 mt-20">
   <Heading htmlheading="h3" size="h3" stylingclasses="text-primary font-bold">FIND DIT HEADSPACE</Heading>
-  
-  <div class="max-w-3xl">
+  <div>
+    <div class="text-left max-w-4xl">
     <Text>
       Uanset hvor du bor i Danmark, er der altid et HEADSPACE-center i nærheden, hvor du kan få en tryg og gratis samtale. Brug kortet herunder til hurtigt at finde den HEADSPACE-lokation, der ligger tættest på dig – og tag det første skridt mod støtte, ro og et sted, der lytter.
     </Text>
-  </div>
-  
-  <div id="headspace" class="flex justify-center mt-6">
-  <img src={Img_10.src}  alt="HEADSPACE kort"class="w-100 mb-10"/>
-</div>
-
-</section>
-
-<section class="bg-accent">
-  <div class="max-w-6xl mx-auto px-4 md:px-0 grid grid-cols-1 md:grid-cols-2 gap-6 items-center pt-5 pb-5">
-    <div class="flex justify-center md:justify-start">
-      <img src={Img_11.src} alt="nyhedsbrev med et hjerte" class="w-45 md:w-80 p-5" />
-    </div>
-
-    <!-- Forms -->
-    <div class="space-y-4 text-left px-4 md:px-6"> 
-      <Heading htmlheading="h3" size="h3" stylingclasses="text-primary font-bold">
-        TILMELD DIG VORES NYHEDSBREV
-      </Heading>
-      <Text>
-        Nyhedsbrevet er til dig, som gerne vil vide mere om, hvordan vi sammen kan forbedre mental sundhed for børn og unge i Danmark. Her får du bl.a. indsigt i vores arbejde, aktiviteter og kommende events.
-      </Text>
-      <Text stylingclasses="font-bold">Du kan til enhver tid framelde dig.</Text>
-
-      <fieldset class="flex flex-col">
-        <legend class="mb-1 text-neutral-black font-semibold text-left">Fornavn:</legend>
-        <input type="text" placeholder="Skriv her"
-               class="input w-full max-w-xs md:max-w-[28rem] border-1 border-neutral-black rounded-sm bg-neutral-black/10 text-neutral-black p-4 focus:outline-none focus:ring-0" />
-      </fieldset>
-
-      <fieldset class="flex flex-col">
-        <legend class="mb-1 text-neutral-black font-semibold text-left">E-mail:</legend>
-        <input type="text" placeholder="Skriv her"
-               class="input w-full max-w-xs md:max-w-[28rem] border-1 border-neutral-black rounded-sm bg-neutral-black/10 text-neutral-black p-4 focus:outline-none focus:ring-0 mb-3" />
-      </fieldset>
-
-      <button class="bg-cta hover:bg-cta-hover rounded-sm text-neutral-white py-3 px-6 font-black text-center mt-4 w-full max-w-xs md:max-w-[12.5rem] self-center block">
-        TILMELD DIG
-	  </button>
     </div>
   </div>
-</section>
+      <div class="flex justify-center mt-6">
+        <img src={Img_10.src} alt="HEADSPACE kort" class="w-100 mt-20 mb-20"/>
+      </div>
+    </section>
 
+    <!-- Nyhedsbrev -->
+    <section class="bg-accent px-6 md:px-12 lg:px-28 py-8 mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+        <div class="flex justify-center md:justify-start">
+          <img src={Img_11.src} alt="nyhedsbrev med et hjerte" class="w-45 md:w-80 p-5" />
+        </div>
+        <div class="space-y-4 text-left pt-12">
+          <Heading htmlheading="h3" size="h3" stylingclasses="text-primary font-bold">
+            TILMELD DIG VORES NYHEDSBREV
+          </Heading>
+          <Text>
+            Nyhedsbrevet er til dig, som gerne vil vide mere om, hvordan vi sammen kan forbedre mental sundhed for børn og unge i Danmark. Her får du bl.a. indsigt i vores arbejde, aktiviteter og kommende events.
+          </Text>
+          <Text stylingclasses="font-bold">Du kan til enhver tid framelde dig.</Text>
+
+          <fieldset class="flex flex-col">
+            <legend class="mb-1 text-neutral-black font-semibold text-left">Fornavn:</legend>
+            <input type="text" placeholder="Skriv her"
+              class="input w-full max-w-xs md:max-w-[28rem] border-1 border-neutral-black rounded-sm bg-neutral-black/10 text-neutral-black p-4 focus:outline-none focus:ring-0" />
+          </fieldset>
+
+          <fieldset class="flex flex-col">
+            <legend class="mb-1 text-neutral-black font-semibold text-left">E-mail:</legend>
+            <input type="text" placeholder="Skriv her"
+              class="input w-full max-w-xs md:max-w-[28rem] border-1 border-neutral-black rounded-sm bg-neutral-black/10 text-neutral-black p-4 focus:outline-none focus:ring-0 mb-3" />
+          </fieldset>
+
+          <a href="/#" class="bg-cta hover:bg-cta-hover rounded-sm text-neutral-white py-3 px-6 font-black text-center mt-4 w-full max-w-xs md:max-w-[12.5rem] block">
+            TILMELD DIG
+          </a>
+          <br> <br>
+        </div>
+      </div>
+    </section>
   </main>
 </MainLayout>
