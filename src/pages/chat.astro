@@ -8,7 +8,6 @@ import img_13 from '../img/img_13.png';
 
 <MainLayout title="CHAT">
   <main>
-    <!-- Wrapper med samlet padding (mobile-first større luft) -->
     <section class="px-6 sm:px-6 md:px-12 lg:px-28">
 
       <!-- H1 Section -->
@@ -23,11 +22,10 @@ import img_13 from '../img/img_13.png';
         </div>
       </section>
 
-      <!-- H2 + tekst + billede -->
+      <!-- H2, tekst og billede -->
       <section class="py-8 lg:py-12">
         <div class="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
           
-          <!-- Tekst -->
           <div class="w-full lg:w-1/2 px-2">
             <Heading 
               htmlheading="h2" 
@@ -76,7 +74,7 @@ import img_13 from '../img/img_13.png';
             </Text>
           </div>
           
-          <!-- Billede -->
+    
 <div class="flex justify-center lg:justify-end mt-6 lg:mt-32 xl:mt-40 mb-20 lg:mb-0 lg:ml-40 xl:ml-56 w-full lg:w-auto px-2">
   <img 
     src={img_12.src} 
@@ -126,11 +124,10 @@ import img_13 from '../img/img_13.png';
           </button>
         </section>
 
-        <!-- Højre sektion: Åbningstider + billede med hvid baggrund -->
+        <!-- Højre sektion: Åbningstider -->
         <section class="flex justify-start lg:justify-end lg:ml-16 px-2">
           <div class="bg-white p-6 sm:p-8 lg:p-10 flex flex-col lg:flex-row items-start w-[60%] lg:w-auto">
 
-            <!-- Tekst -->
             <div class="flex-1">
               <Heading 
                 htmlheading="h4" 
@@ -148,7 +145,6 @@ import img_13 from '../img/img_13.png';
               </Text>
             </div>
 
-            <!-- Billede -->
             <div class="mt-8 lg:mt-10 lg:ml-12 flex-shrink-0">
               <img 
                 src={img_13.src} 
