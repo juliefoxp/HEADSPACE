@@ -26,26 +26,6 @@ import Img_39 from '../img/img_39.png';
 
 <MainLayout title="HEADSPACE.DK">
 
-  <!-- LOGIN BOX -->
-  <div id="loginBox" class="min-h-screen flex items-center justify-center">
-    <div class="bg-white p-6 rounded-xl shadow w-80">
-      <input id="pw" type="password" placeholder="Adgangskode" class="border p-2 mb-3 w-full" />
-      <button
-        onclick="checkLogin()"
-        class="py-2 w-full rounded text-white transition-colors font-barlow font-bold text-[18px]"
-        style="background-color: var(--color-cta);"
-        onmouseover="this.style.backgroundColor='var(--color-cta-hover)'"
-        onmouseout="this.style.backgroundColor='var(--color-cta)'"
-      >
-        Log ind
-      </button>
-      <p id="error" class="text-red-500 text-sm hidden mt-2">Forkert kode</p>
-    </div>
-  </div>
-
-  <!-- HELE SITET -->
-  <div id="siteContent" class="hidden">
-
   <main>
     <!-- Hero Section -->
 <section class="bg-[linear-gradient(to_bottom,#F6EDDE4D,#76AFE7CC)] px-6 md:px-12 lg:px-28 py-20">
@@ -222,8 +202,6 @@ import Img_39 from '../img/img_39.png';
   </div>
 </section>
 
-
-
     <!-- Find dit headspace -->
     <section class="px-6 md:px-12 lg:px-28 py-12">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-[75rem]">
@@ -281,8 +259,6 @@ import Img_39 from '../img/img_39.png';
     <img src={Img_39.src} alt="tænkeboble med hjerte i" class="w-50 mb-10"/>
   </div>
 </section>
-
- 
 
 
 <div class="bg-secondary p-5 grid grid-cols-1 md:grid-cols-3 justify-items-center gap-5 pt-12 pb-12">
@@ -375,30 +351,6 @@ import Img_39 from '../img/img_39.png';
       </div>
     </section>
   </main>
-
-
- <script is:inline>
-    const loginBox = document.getElementById("loginBox");
-    const siteContent = document.getElementById("siteContent");
-    const error = document.getElementById("error");
-
-    // Tjek om brugeren allerede er logget ind
-    if (localStorage.getItem("headspaceLoggedIn") === "true") {
-      loginBox.style.display = "none";
-      siteContent.style.display = "block";
-    }
-
-    window.checkLogin = function () {
-      const pw = document.getElementById("pw").value;
-      if (pw === "1234") {
-        localStorage.setItem("headspaceLoggedIn", "true"); // gem status
-        loginBox.style.display = "none";
-        siteContent.style.display = "block";
-      } else {
-        error.style.display = "block";
-      }
-    };
-  </script>
 
 
 </MainLayout>
