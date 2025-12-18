@@ -21,11 +21,30 @@ import Img_8 from '../img/img_8.webp';
 import Img_9 from '../img/img_9.webp';
 import Img_10 from '../img/img_10.png';
 import Img_11 from '../img/img_11.png';
-import Img_39 from '../img/img_39.png';
-
 ---
 
 <MainLayout title="HEADSPACE.DK">
+
+  <!-- LOGIN BOX -->
+  <div id="loginBox" class="min-h-screen flex items-center justify-center">
+    <div class="bg-white p-6 rounded-xl shadow w-80">
+      <input id="pw" type="password" placeholder="Adgangskode" class="border p-2 mb-3 w-full" />
+      <button
+        onclick="checkLogin()"
+        class="py-2 w-full rounded text-white transition-colors font-barlow font-bold text-[18px]"
+        style="background-color: var(--color-cta);"
+        onmouseover="this.style.backgroundColor='var(--color-cta-hover)'"
+        onmouseout="this.style.backgroundColor='var(--color-cta)'"
+      >
+        Log ind
+      </button>
+      <p id="error" class="text-red-500 text-sm hidden mt-2">Forkert kode</p>
+    </div>
+  </div>
+
+  <!-- HELE SITET -->
+  <div id="siteContent" class="hidden">
+
   <main>
     <!-- Hero Section -->
 <section class="bg-[linear-gradient(to_bottom,#F6EDDE4D,#76AFE7CC)] px-6 md:px-12 lg:px-28 py-20">
@@ -228,10 +247,7 @@ import Img_39 from '../img/img_39.png';
       </Text>
     </div>
 
-    {/* Billede kun på desktop til højre */}
-    <div class="hidden lg:flex justify-end">
-      <img src={Img_39.src} alt="tænkeboble med hjerte i" class="w-50"/>
-    </div>
+
 
   </div>
 
@@ -242,10 +258,7 @@ import Img_39 from '../img/img_39.png';
     </Text>
   </div>
 
-  {/* Billede på mobil under alt indhold */}
-  <div class="flex justify-center lg:hidden">
-    <img src={Img_39.src} alt="tænkeboble med hjerte i" class="w-50 mb-10"/>
-  </div>
+
 </section>
 
 
@@ -339,4 +352,31 @@ import Img_39 from '../img/img_39.png';
       </div>
     </section>
   </main>
+
+
+ <script is:inline>
+    const loginBox = document.getElementById("loginBox");
+    const siteContent = document.getElementById("siteContent");
+    const error = document.getElementById("error");
+
+    // Tjek om brugeren allerede er logget ind
+    if (localStorage.getItem("headspaceLoggedIn") === "true") {
+      loginBox.style.display = "none";
+      siteContent.style.display = "block";
+    }
+
+    window.checkLogin = function () {
+      const pw = document.getElementById("pw").value;
+      if (pw === "1234") {
+        localStorage.setItem("headspaceLoggedIn", "true"); // gem status
+        loginBox.style.display = "none";
+        siteContent.style.display = "block";
+      } else {
+        error.style.display = "block";
+      }
+    };
+  </script>
+
+
 </MainLayout>
+
