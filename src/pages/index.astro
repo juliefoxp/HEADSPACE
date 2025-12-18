@@ -21,6 +21,7 @@ import Img_8 from '../img/img_8.webp';
 import Img_9 from '../img/img_9.webp';
 import Img_10 from '../img/img_10.png';
 import Img_11 from '../img/img_11.png';
+import Img_39 from '../img/img_39.png';
 ---
 
 <MainLayout title="HEADSPACE.DK">
@@ -247,7 +248,10 @@ import Img_11 from '../img/img_11.png';
       </Text>
     </div>
 
-
+    {/* Billede kun på desktop til højre */}
+    <div class="hidden lg:flex justify-end">
+      <img src={Img_39.src} alt="tænkeboble med hjerte i" class="w-50"/>
+    </div>
 
   </div>
 
@@ -258,9 +262,11 @@ import Img_11 from '../img/img_11.png';
     </Text>
   </div>
 
-
+  {/* Billede på mobil under alt indhold */}
+  <div class="flex justify-center lg:hidden">
+    <img src={Img_39.src} alt="tænkeboble med hjerte i" class="w-50 mb-10"/>
+  </div>
 </section>
-
 
 <div class="bg-secondary p-5 grid grid-cols-1 md:grid-cols-3 justify-items-center gap-5">
   <div class="bg-white p-3 pb-5 flex flex-col items-center">
