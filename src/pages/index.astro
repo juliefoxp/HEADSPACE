@@ -176,39 +176,53 @@ import Img_39 from '../img/img_39.png';
       </div>
     </section>
 
-    <!-- Donation -->
-    <section class="bg-secondary px-6 md:px-12 lg:px-28 py-7">
-      <div class="pt-12">
-      <Heading htmlheading="h3" size="h3" stylingclasses="text-primary font-bold text-center md:text-left">
-        SAMMEN GIVER VI UNGE MOD TIL AT ÅBNE OP
-      </Heading>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:items-center max-w-[75rem] mx-auto">
-        <div class="space-y-4">
-          <Text>
-            Hos HEADSPACE tilbyder vi et frirum for unge mellem 12-25 år, der har brug for nogen at tale med. Vores rådgivere er altid klar til at lytte, og det bedste af det hele er, at det er helt gratis og anonymt.
-          </Text>
-          <Text>
-            Mange unge oplever perioder, hvor tankerne fylder, og livet ikke går, som man havde håbet. Det er helt normalt, men det kan også være en stor belastning. Hos headspace står vores døre åbne over hele landet, så ingen skal gå igennem disse perioder alene. Vi tilbyder så mange samtaler, som der er behov for, helt uden ventelister og uden at det koster noget.
-          </Text>
-          <Text>
-            For at kunne fortsætte dette vigtige arbejde har vi brug for din støtte. Din donation gør det muligt for os at nå ud til flere unge, sikre tilgængelige samtaler og tilbyde en tryg og fortrolig ramme, hvor tanker kan deles og lettes. Ved at donere til headspace hjælper du med at sikre, at flere unge får den støtte, de har brug for, i en svær tid.
-          </Text>
-        </div>
+<!-- Donation -->
+<section class="bg-secondary px-6 md:px-12 lg:px-28 py-7 pb-16">
+  <!-- Heading wrapper -->
+  <div class="pt-12"> <!-- mindre top-padding -->
+    <Heading 
+      htmlheading="h3" 
+      size="h3" 
+      stylingclasses="text-primary font-bold text-left m-0"
+    >
+      SAMMEN GIVER VI UNGE MOD TIL AT ÅBNE OP
+    </Heading>
+  </div>
 
-        <div class="bg-accent w-full max-w-[335px] h-[430px] p-4 rounded-md text-center mx-auto flex flex-col justify-between">
-          <div class="space-y-2 pt-10">
-            <Heading htmlheading="h4" size="h4" stylingclasses="text-primary font-bold">DONATIONER</Heading>
-            <Text>Bidrag med en donation til HEADSPACE</Text>
-            <div class="flex justify-center mt-15">
-              <img src={Img_38.src} alt="illustration af hånd med hjerte i" class="w-32" />
-            </div>
-          </div>
-          <a href="/indsamling" class="bg-cta hover:bg-cta-hover rounded-sm text-neutral-white w-full py-3 font-black inline-block text-center">DONATION</a>
+  <!-- Tekst og donation-box -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-[75rem] mx-auto mt-2"> <!-- mindre mt -->
+    <!-- Tekst kolonne -->
+    <div class="space-y-3"> <!-- mindre mellemrum mellem text-paragrafer -->
+      <Text class="m-0">
+        Hos HEADSPACE tilbyder vi et frirum for unge mellem 12-25 år, der har brug for nogen at tale med. Vores rådgivere er altid klar til at lytte, og det bedste af det hele er, at det er helt gratis og anonymt.
+      </Text>
+      <Text class="m-0">
+        Mange unge oplever perioder, hvor tankerne fylder, og livet ikke går, som man havde håbet. Det er helt normalt, men det kan også være en stor belastning. Hos headspace står vores døre åbne over hele landet, så ingen skal gå igennem disse perioder alene. Vi tilbyder så mange samtaler, som der er behov for, helt uden ventelister og uden at det koster noget.
+      </Text>
+      <Text class="m-0">
+        For at kunne fortsætte dette vigtige arbejde har vi brug for din støtte. Din donation gør det muligt for os at nå ud til flere unge, sikre tilgængelige samtaler og tilbyde en tryg og fortrolig ramme, hvor tanker kan deles og lettes. Ved at donere til headspace hjælper du med at sikre, at flere unge får den støtte, de har brug for, i en svær tid.
+      </Text>
+    </div>
+
+    <!-- Donation-box kolonne -->
+    <div class="bg-accent w-full max-w-[335px] h-[430px] p-4 rounded-md text-center mx-auto flex flex-col justify-between -mt-0 md:-mt-8">
+      <div class="space-y-2 pt-10">
+        <Heading htmlheading="h4" size="h4" stylingclasses="text-primary font-bold m-0">
+          DONATIONER
+        </Heading>
+        <Text class="m-0">Bidrag med en donation til HEADSPACE</Text>
+        <div class="flex justify-center mt-4">
+          <img src={Img_38.src} alt="illustration af hånd med hjerte i" class="w-32" />
         </div>
       </div>
-      <br> <br>
-    </section>
+      <a href="/indsamling" class="bg-cta hover:bg-cta-hover rounded-sm text-neutral-white w-full py-3 font-black inline-block text-center">
+        DONATION
+      </a>
+    </div>
+
+  </div>
+</section>
+
 
     <!-- Find dit headspace -->
     <section class="px-6 md:px-12 lg:px-28 py-12">
@@ -258,7 +272,7 @@ import Img_39 from '../img/img_39.png';
   <Heading htmlheading="h4" size="h4" stylingclasses="text-primary font-bold">SAMARBEJD MED UNGERÅDET</Heading>
   <div class="mb-15">
     <Text>
-      Ønsker du at samarbejde med vores ungeråd, så kan du kontakte os lige her: ungeraadet@detsocialenetvaerk.dk
+      Ønsker du at samarbejde med vores ungeråd, så kan du kontakte os lige her: <div class=" font-bold">ungeraadet@detsocialenetvaerk.dk</div>
     </Text>
   </div>
 
@@ -268,42 +282,45 @@ import Img_39 from '../img/img_39.png';
   </div>
 </section>
 
-<div class="bg-secondary p-5 grid grid-cols-1 md:grid-cols-3 justify-items-center gap-5">
+ 
+
+
+<div class="bg-secondary p-5 grid grid-cols-1 md:grid-cols-3 justify-items-center gap-5 pt-12 pb-12">
   <div class="bg-white p-3 pb-5 flex flex-col items-center">
     <img src={Img_1.src} alt="Julie fra ungerådet" class="w-60"/>
-    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center font-medium text-primary font-bold">JULIE</Heading>
+    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center text-primary font-bold">JULIE</Heading>
   </div>
   <div class="bg-white p-3 pb-5 flex flex-col items-center">
     <img src={Img_2.src} alt="Aske fra ungerådet" class="w-60"/>
-    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center font-medium text-primary font-bold">ASKE</Heading>
+    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center text-primary font-bold">ASKE</Heading>
   </div>
   <div class="bg-white p-3 pb-5 flex flex-col items-center">
     <img src={Img_3.src} alt="Lea fra ungerådet" class="w-60"/>
-    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center font-medium text-primary font-bold">LEA</Heading>
+    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center text-primary font-bold">LEA</Heading>
   </div>
   <div class="bg-white p-3 pb-5 flex flex-col items-center">
     <img src={Img_4.src} alt="Prince fra ungerådet" class="w-60"/>
-    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center font-medium text-primary font-bold">PRINCE</Heading>
+    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center text-primary font-bold">PRINCE</Heading>
   </div>
   <div class="bg-white p-3 pb-5 flex flex-col items-center">
     <img src={Img_5.src} alt="Lærke fra ungerådet" class="w-60"/>
-    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center font-medium text-primary font-bold">LÆRKE</Heading>
+    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center text-primary font-bold">LÆRKE</Heading>
   </div>
   <div class="bg-white p-3 pb-5 flex flex-col items-center">
     <img src={Img_6.src} alt="Feline fra ungerådet" class="w-60"/>
-    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center font-medium text-primary font-bold">FELINE</Heading>
+    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center text-primary font-bold">FELINE</Heading>
   </div>
   <div class="bg-white p-3 pb-5 flex flex-col items-center">
     <img src={Img_7.src} alt="Astrid fra ungerådet" class="w-60"/>
-    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center font-medium text-primary font-bold">ASTRID</Heading>
+    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center text-primary font-bold">ASTRID</Heading>
   </div>
   <div class="bg-white p-3 pb-5 flex flex-col items-center">
     <img src={Img_8.src} alt="Sofie fra ungerådet" class="w-60"/>
-    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center font-medium text-primary font-bold">SOFIE</Heading>
+    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center text-primary font-bold">SOFIE</Heading>
   </div>
   <div class="bg-white p-3 pb-5 flex flex-col items-center">
     <img src={Img_9.src} alt="Victor fra ungerådet" class="w-60"/>
-    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center font-medium text-primary font-bold">VICTOR</Heading>
+    <Heading htmlheading="h3" size="h3" stylingclasses="mt-2 text-center text-primary font-bold">VICTOR</Heading>
   </div>
 </div>
 </section>
